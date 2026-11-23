@@ -134,11 +134,11 @@ function kitPage(m, s) {
   fill("brands-title", esc(m.brands_title || "Brands I've worked with"));
   fill("brands", brands.map((b) => {
     const inner = b.logo
-      ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">`
+      ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">${b.caption ? `<span class="brand-cap">${esc(b.caption)}</span>` : ""}`
       : `<span>${esc(b.name)}</span>`;
     return b.url
-      ? `<a class="brand-tile${b.fill ? " fill" : ""}" href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
-      : `<div class="brand-tile${b.fill ? " fill" : ""}" title="${esc(b.name)}">${inner}</div>`;
+      ? `<a class="brand-tile${b.fill ? " fill" : ""}${b.caption ? " cap" : ""}"${b.bg ? ` style="background:${esc(b.bg)};border-color:transparent"` : ""} href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
+      : `<div class="brand-tile${b.fill ? " fill" : ""}${b.caption ? " cap" : ""}"${b.bg ? ` style="background:${esc(b.bg)};border-color:transparent"` : ""} title="${esc(b.name)}">${inner}</div>`;
   }).join(""));
   if (!brands.length) $("brands-sec")?.classList.add("hidden");
   fill("services", (m.services || []).map((x) => `<div class="card svc"><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`).join(""));
