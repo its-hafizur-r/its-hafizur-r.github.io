@@ -132,19 +132,20 @@
     "Halal food finds",
     "London life & shows"
   ],
-  "_brands_help": "Brands I've worked with, shown as logos straight on the page. name is required. logo: a PNG with a transparent background in assets/brands/ (without one the name shows instead). caption: small text under the logo. shadow: true adds a soft shadow for light logos.",
+  "_brands_help": "Brands I've worked with, shown as tiles. name is required. logo: image in assets/brands/. bg: tile colour behind the logo. caption: small text under the logo.",
   "brands_title": "Brands I've worked with",
   "brands": [
     {
       "name": "High School Musical On Stage",
-      "logo": "assets/brands/high-school-musical.png",
-      "shadow": true
+      "logo": "assets/brands/high-school-musical.jpg",
+      "bg": "#7a0505",
+      "caption": "ON STAGE"
     },
     {
       "name": "Angsana Velavaru, Maldives",
-      "logo": "assets/brands/angsana-velavaru.png",
-      "caption": "MALDIVES",
-      "caption_color": "#b6531a"
+      "logo": "assets/brands/angsana-velavaru.jpg",
+      "bg": "#b6531a",
+      "caption": "MALDIVES"
     }
   ],
   "services": [
