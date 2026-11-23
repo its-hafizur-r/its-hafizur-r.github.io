@@ -138,8 +138,8 @@
     {
       "name": "High School Musical On Stage",
       "logo": "assets/brands/high-school-musical.jpg",
-      "bg": "#7a0505",
-      "caption": "ON STAGE"
+      "caption": "ON STAGE",
+      "fill": true
     },
     {
       "name": "Angsana Velavaru, Maldives",

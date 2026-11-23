@@ -293,3 +293,6 @@ footer a { color: var(--muted); }
 .brand-name { font-weight: 700; font-size: 15px; text-align: center; }
 @media (min-width: 720px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } .brand-tile { height: 170px; } .brand-tile img { height: 120px; } }
 .brand-tile img[src$="firmoo.png"] { height: auto; max-height: 104px; width: 82%; }
+.brand-tile.fill { position: relative; padding: 0; border-color: transparent; background: #000; }
+.brand-tile.fill img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.brand-tile.fill .brand-cap { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; text-shadow: 0 1px 3px rgba(0,0,0,.6); }

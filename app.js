@@ -138,8 +138,8 @@ function kitPage(m, s) {
       ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">` + (b.caption ? `<span class="brand-cap">${esc(b.caption)}</span>` : "")
       : `<span class="brand-name">${esc(b.name)}</span>`;
     return b.url
-      ? `<a class="brand-tile"${style} href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
-      : `<div class="brand-tile"${style} title="${esc(b.name)}">${inner}</div>`;
+      ? `<a class="brand-tile${b.fill ? " fill" : ""}"${style} href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
+      : `<div class="brand-tile${b.fill ? " fill" : ""}"${style} title="${esc(b.name)}">${inner}</div>`;
   }).join(""));
   if (!brands.length) $("brands-sec")?.classList.add("hidden");
   fill("services", (m.services || []).map((x) => `<div class="card svc"><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`).join(""));
