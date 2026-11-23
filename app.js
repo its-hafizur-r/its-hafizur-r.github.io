@@ -229,16 +229,20 @@ function animate() {
     };
     requestAnimationFrame(step);
   };
+  // Watch the containers (bars start at zero width, which some phone
+  // browsers never report as "visible").
+  const run = (box) => {
+    box.querySelectorAll("[data-w]").forEach((b) => (b.style.width = b.dataset.w));
+    box.querySelectorAll(".num").forEach(countUp);
+  };
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (!en.isIntersecting) return;
-      const el = en.target;
-      if (el.dataset.w) el.style.width = el.dataset.w; else countUp(el);
-      io.unobserve(el);
+      run(en.target);
+      io.unobserve(en.target);
     });
-  }, { threshold: 0.4 });
-  bars.forEach((b) => io.observe(b));
-  nums.forEach((n) => io.observe(n));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".bar-row, .split, .stat").forEach((el) => io.observe(el));
 }
 
 // ------------------------------------------------- moving profile photo
