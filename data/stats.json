@@ -1,17 +1,17 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-23T20:33:30Z",
+ "updated": "2026-11-23T20:37:35Z",
  "source": "public_profile",
  "profile": {
   "followers": 12964,
   "following": 59,
-  "likes": 2282925,
+  "likes": 2282933,
   "videos": 599
  },
  "recent": {
   "videos_counted": 19,
   "window_days": 30,
-  "avg_views": 12320,
+  "avg_views": 12321,
   "avg_likes": 202,
   "avg_comments": 7,
   "avg_shares": 53,
@@ -67,7 +67,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 593100,
+   "views": 593200,
    "likes": 52000,
    "comments": 143,
    "shares": 16500,
@@ -114,7 +114,7 @@
    "views": 216900,
    "likes": 27400,
    "comments": 72,
-   "shares": 6808,
+   "shares": 6809,
    "created": 1789657153,
    "url": "https://www.tiktok.com/@hafizur_r/video/7686518924287970582",
    "cover": "assets/covers/7686518924287970582.jpg"
@@ -157,7 +157,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 593100,
+   "views": 593200,
    "likes": 52000,
    "comments": 143,
    "shares": 16500,
