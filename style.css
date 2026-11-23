@@ -292,3 +292,4 @@ footer a { color: var(--muted); }
 .brand-cap { color: #fff; font-family: Georgia, "Times New Roman", serif; font-size: 11px; letter-spacing: .32em; padding-left: .32em; }
 .brand-name { font-weight: 700; font-size: 15px; text-align: center; }
 @media (min-width: 720px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } .brand-tile { height: 170px; } .brand-tile img { height: 120px; } }
+.brand-tile img[src$="firmoo.png"] { height: auto; max-height: 104px; width: 82%; }

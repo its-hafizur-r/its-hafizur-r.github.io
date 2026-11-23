@@ -146,6 +146,11 @@
       "logo": "assets/brands/angsana-velavaru.jpg",
       "bg": "#b6531a",
       "caption": "MALDIVES"
+    },
+    {
+      "name": "Firmoo",
+      "logo": "assets/brands/firmoo.png",
+      "bg": "#ffffff"
     }
   ],
   "services": [
