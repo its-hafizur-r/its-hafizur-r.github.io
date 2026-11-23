@@ -23,11 +23,6 @@
       "highlight": true
     },
     {
-      "label": "Most watched: Zootopia Land, Shanghai",
-      "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
-      "icon": "play"
-    },
-    {
       "label": "Instagram",
       "url": "https://www.instagram.com/hafizur_r",
       "icon": "instagram"
@@ -37,6 +32,16 @@
       "url": "mailto:Hafizur-r@hotmail.com",
       "icon": "mail"
     }
+  ],
+  "_featured_help": "Video tiles on your home page, in this order. Paste TikTok video links (or just the long number). The tiles' pictures and view counts fill in a couple of minutes after you save. Leave the list empty [] to hide the section.",
+  "featured_title": "Watch",
+  "featured_videos": [
+    "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+    "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
+    "https://www.tiktok.com/@hafizur_r/video/7694696372934642966",
+    "https://www.tiktok.com/@hafizur_r/video/7685428540522646806",
+    "https://www.tiktok.com/@hafizur_r/video/7657268246541847830",
+    "https://www.tiktok.com/@hafizur_r/video/7705671677606251798"
   ],
   "audience": {
     "_note": "Copy these from TikTok Studio > Analytics > Viewers (or Beacons) once a month.",

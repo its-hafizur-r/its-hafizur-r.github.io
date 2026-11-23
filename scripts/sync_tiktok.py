@@ -128,6 +128,21 @@ class TikTokAPI:
             cursor = d.get("cursor")
         return out
 
+    def query(self, ids):
+        fields = ("id,title,video_description,create_time,cover_image_url,share_url,"
+                  "view_count,like_count,comment_count,share_count")
+        out = []
+        for i in range(0, len(ids), 20):
+            d = self._call("/video/query/", fields, {"filters": {"video_ids": ids[i:i + 20]}})
+            for v in d.get("videos", []):
+                out.append({
+                    "id": v["id"], "title": (v.get("title") or v.get("video_description") or "")[:140],
+                    "created": int(v.get("create_time", 0)), "views": v.get("view_count", 0),
+                    "likes": v.get("like_count", 0), "comments": v.get("comment_count", 0),
+                    "shares": v.get("share_count", 0), "cover_src": v.get("cover_image_url"),
+                    "url": v.get("share_url")})
+        return out
+
 
 # --------------------------------------------------------------- public source
 class PublicPages:
@@ -158,10 +173,12 @@ class PublicPages:
             print("  embed list failed:", e)
             return set()
 
-    def videos(self, limit=200):
+    def videos(self, limit=200, extra=()):
         cache = load(CACHE, {"seed_ids": [], "videos": {}})
         ids = set(cache.get("seed_ids", [])) | set(cache.get("videos", {})) | self._recent_ids()
-        for vid in sorted(ids, reverse=True)[:limit]:
+        ids = sorted(ids, reverse=True)[:limit]
+        ids = list(dict.fromkeys(list(extra) + ids))
+        for vid in ids:
             time.sleep(1.2)
             try:
                 d = self._scope(f"https://www.tiktok.com/@{self.handle}/video/{vid}")
@@ -234,24 +251,37 @@ def main():
 
     old = load(STATS, {})
     now = time.time()
+    featured_ids = []
+    for f in manual.get("featured_videos", []):
+        m = re.search(r"(\d{17,20})", str(f))
+        if m:
+            featured_ids.append(m.group(1))
     profile = src.profile()
-    videos = src.videos()
+    videos = src.videos(extra=featured_ids) if isinstance(src, PublicPages) else src.videos()
+    by_id = {str(v["id"]): v for v in videos}
+    missing = [i for i in featured_ids if i not in by_id]
+    if missing and isinstance(src, TikTokAPI):
+        for v in src.query(missing):
+            by_id[str(v["id"])] = v
     print(f"  profile ok, {len(videos)} videos")
 
     recent = summarise(videos, int(cfg.get("window_days", 30)), int(cfg.get("min_videos", 8)),
                        int(cfg.get("skip_newer_than_days", 2)), now)
 
     os.makedirs(COVERS, exist_ok=True)
-    top = sorted(videos, key=lambda v: v["views"], reverse=True)[:int(cfg.get("top_videos", 9))]
-    top_out = []
-    for v in top:
+
+    def tile(v):
         rel = f"assets/covers/{v['id']}.jpg"
         has = fetch_cover(v["cover_src"], os.path.join(ROOT, rel)) if v.get("cover_src") \
             else os.path.exists(os.path.join(ROOT, rel))
-        top_out.append({k: v[k] for k in ("id", "title", "views", "likes", "comments", "shares", "created")}
-                       | {"url": v.get("url") or f"https://www.tiktok.com/@{handle}/video/{v['id']}",
-                          "cover": rel if has else None})
-    keep = {f"{v['id']}.jpg" for v in top}
+        return ({k: v[k] for k in ("id", "title", "views", "likes", "comments", "shares", "created")}
+                | {"url": v.get("url") or f"https://www.tiktok.com/@{handle}/video/{v['id']}",
+                   "cover": rel if has else None})
+
+    top = sorted(videos, key=lambda v: v["views"], reverse=True)[:int(cfg.get("top_videos", 9))]
+    top_out = [tile(v) for v in top]
+    featured_out = [tile(by_id[i]) for i in featured_ids if i in by_id]
+    keep = {f"{v['id']}.jpg" for v in top} | {f"{i}.jpg" for i in featured_ids}
     for f in os.listdir(COVERS):
         if f.endswith(".jpg") and f not in keep:
             os.remove(os.path.join(COVERS, f))
@@ -267,6 +297,7 @@ def main():
         "profile": {k: profile[k] for k in ("followers", "following", "likes", "videos")},
         "recent": recent or old.get("recent"),
         "top_videos": top_out,
+        "featured": featured_out,
     }
     save(STATS, stats)
     print(json.dumps(stats["profile"]), json.dumps(stats["recent"]))

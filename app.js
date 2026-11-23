@@ -36,6 +36,28 @@ async function getJSON(path) {
   } catch { return {}; }
 }
 
+function vidTile(v) {
+  const title = (v.title || "").replace(/#\S+/g, "").trim();
+  return `
+    <a class="vid${v.cover ? "" : " noimg"}" href="${esc(v.url)}" target="_blank" rel="noopener">
+      ${v.cover ? `<img src="${esc(v.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode.classList.add('noimg')">` : ""}
+      <span class="shade"></span>
+      <span class="meta">${v.views != null ? `<span class="views">${icon("play")}${short(v.views)}</span>` : ""}<span class="t">${esc(title)}</span></span>
+    </a>`;
+}
+
+function featured(m, s) {
+  const known = Object.fromEntries([...(s.top_videos || []), ...(s.featured || [])].map((v) => [String(v.id), v]));
+  const tiles = (m.featured_videos || []).map((f) => {
+    const id = (String(f).match(/\d{17,20}/) || [])[0];
+    if (!id) return "";
+    return vidTile(known[id] || { id, url: `https://www.tiktok.com/@${m.handle}/video/${id}`, title: "Watch on TikTok" });
+  }).join("");
+  if (!tiles) { $("featured-sec")?.classList.add("hidden"); return; }
+  fill("featured-title", esc(m.featured_title || "Watch"));
+  fill("featured", tiles);
+}
+
 function hero(m) {
   document.querySelectorAll("[data-name]").forEach((el) => (el.textContent = m.name || ""));
   fill("handle", "@" + esc(m.handle));
@@ -48,6 +70,7 @@ function bioPage(m, s) {
     <a class="link-btn${l.highlight ? " highlight" : ""}" href="${esc(l.url)}"${/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : ""}>
       <span class="ic">${icon(l.icon)}</span><span class="lbl">${esc(l.label)}</span><span class="arrow">${icon("arrow")}</span>
     </a>`).join(""));
+  featured(m, s);
   const p = s.profile || {};
   fill("mini", `
     <div><div class="num">${short(p.followers)}</div><div class="lab">followers</div></div>
@@ -91,12 +114,7 @@ function kitPage(m, s) {
     </div>`);
   fill("aud-note", a.updated ? `Audience from TikTok analytics, ${esc(a.period || "")}, updated ${date(a.updated)}.` : "");
 
-  fill("videos", (s.top_videos || []).map((v) => `
-    <a class="vid${v.cover ? "" : " noimg"}" href="${esc(v.url)}" target="_blank" rel="noopener">
-      ${v.cover ? `<img src="${esc(v.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode.classList.add('noimg')">` : ""}
-      <span class="shade"></span>
-      <span class="meta"><span class="views">${icon("play")}${short(v.views)}</span><span class="t">${esc(v.title.replace(/#\S+/g, "").trim())}</span></span>
-    </a>`).join(""));
+  fill("videos", (s.top_videos || []).map(vidTile).join(""));
 
   fill("pillars", (m.pillars || []).map((x) => `<span class="chip">${esc(x)}</span>`).join(""));
   fill("brands", (m.brands || []).map((x) => `<span class="chip brand">${esc(x)}</span>`).join(""));

@@ -243,3 +243,9 @@ footer a { color: var(--muted); }
 .mail-opts .btn { padding: 10px 8px; font-size: 14px; }
 .sheet-close { background: none; border: 0; color: var(--muted); font: inherit; margin-top: 14px; cursor: pointer; }
 @media (min-width: 720px) { .sheet-bg { align-items: center; } .sheet { border-radius: 24px; } }
+
+/* home page video tiles */
+.featured { margin: 8px 0 0; }
+.feat-h { font-size: 20px; margin: 0 0 10px; }
+.narrow .vid-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.narrow .vid { aspect-ratio: 9 / 13; }
