@@ -10,7 +10,28 @@
   "intro": "I make short, honest travel videos: theme parks, value hotels, food finds and the little things that make a place worth the flight. Most of my audience is in the US and UK, mostly 25 to 44.",
   "_style_videos_help": "Media kit 'Video styles' section (above Top videos). One entry per style: paste the TikTok link as url and a short style name as label. Leave the list empty [] to hide the section.",
   "style_videos_title": "Video styles",
-  "style_videos": [],
+  "style_videos": [
+    {
+      "url": "https://www.tiktok.com/@hafizur_r/video/7657228482300120342",
+      "label": "Adventure & activities"
+    },
+    {
+      "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+      "label": "Theme parks"
+    },
+    {
+      "url": "https://www.tiktok.com/@hafizur_r/video/7376007870606773537",
+      "label": "Island escapes"
+    },
+    {
+      "url": "https://www.tiktok.com/@hafizur_r/video/7652421190723652886",
+      "label": "City views"
+    },
+    {
+      "url": "https://www.tiktok.com/@hafizur_r/video/7648241796643867926",
+      "label": "Hotel stays"
+    }
+  ],
   "email": "Hafizur-r@hotmail.com",
   "links": {
     "tiktok": "https://www.tiktok.com/@hafizur_r",
