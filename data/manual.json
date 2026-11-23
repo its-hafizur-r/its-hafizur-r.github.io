@@ -132,7 +132,7 @@
     "Halal food finds",
     "London life & shows"
   ],
-  "_brands_help": "Brands I've worked with, shown as tiles. name is required. logo: image in assets/brands/. bg: tile colour behind the logo. caption: small text under the logo.",
+  "_brands_help": "Brands I've worked with, shown as tiles. name is required. logo: image in assets/brands/. bg: tile colour behind the logo. caption: small text under the logo. caption2 adds a second line; caption_color changes the caption colour (default white).",
   "brands_title": "Brands I've worked with",
   "brands": [
     {
@@ -151,6 +151,14 @@
       "name": "Firmoo",
       "logo": "assets/brands/firmoo.png",
       "bg": "#ffffff"
+    },
+    {
+      "name": "Coconut Palm Beach Hotel, Sri Lanka",
+      "logo": "assets/brands/coconut-palm-beach.png",
+      "bg": "#ffffff",
+      "caption": "COCONUT PALM BEACH",
+      "caption2": "SRI LANKA",
+      "caption_color": "#2e7d32"
     }
   ],
   "services": [

@@ -135,7 +135,7 @@ function kitPage(m, s) {
   fill("brands", brands.map((b) => {
     const style = b.bg ? ` style="background:${esc(b.bg)};border-color:transparent"` : "";
     const inner = b.logo
-      ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">` + (b.caption ? `<span class="brand-cap">${esc(b.caption)}</span>` : "")
+      ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">` + (b.caption ? `<span class="brand-cap"${b.caption_color ? ` style="color:${esc(b.caption_color)}"` : ""}>${esc(b.caption)}${b.caption2 ? `<small>${esc(b.caption2)}</small>` : ""}</span>` : "")
       : `<span class="brand-name">${esc(b.name)}</span>`;
     return b.url
       ? `<a class="brand-tile${b.fill ? " fill" : ""}"${style} href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
