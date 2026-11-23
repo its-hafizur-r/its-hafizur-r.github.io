@@ -71,14 +71,14 @@ function bioPage(m, s) {
       <span class="ic">${icon(l.icon)}</span><span class="lbl">${esc(l.label)}</span><span class="arrow">${icon("arrow")}</span>
     </a>`).join(""));
   featured(m, s);
-  const p = s.profile || {};
-  fill("mini", `
-    <div><div class="num">${short(p.followers)}</div><div class="lab">followers</div></div>
-    <div><div class="num">${short(p.likes)}</div><div class="lab">likes</div></div>
-    <div><div class="num">${short(s.recent?.avg_views)}</div><div class="lab">avg views</div></div>`);
   const L = m.links || {};
-  fill("socials", ["tiktok", "instagram"].filter((k) => L[k]).map((k) =>
-    `<a class="pill" href="${esc(L[k])}" target="_blank" rel="noopener">${icon(k)}${k === "tiktok" ? "TikTok" : "Instagram"}</a>`).join(""));
+  const icons = [
+    ["tiktok", L.tiktok, "TikTok"],
+    ["mail", m.email ? "mailto:" + m.email : "", "Email"],
+    ["instagram", L.instagram, "Instagram"],
+  ].filter((x) => x[1]);
+  fill("socials", icons.map(([ic, url, name]) =>
+    `<a class="icon-btn" href="${esc(url)}" aria-label="${name}" title="${name}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener"' : ""}>${icon(ic)}</a>`).join(""));
 }
 
 function kitPage(m, s) {

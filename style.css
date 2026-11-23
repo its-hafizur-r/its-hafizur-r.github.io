@@ -249,3 +249,15 @@ footer a { color: var(--muted); }
 .feat-h { font-size: 20px; margin: 0 0 10px; }
 .narrow .vid-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .narrow .vid { aspect-ratio: 9 / 13; }
+
+/* home page icon links + thanks */
+.icon-row { display: flex; justify-content: center; gap: 14px; margin-top: 14px; }
+.icon-btn {
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--card); border: 1px solid var(--line); color: var(--ink);
+  transition: transform .12s ease, color .12s ease;
+}
+.icon-btn:hover { color: var(--accent); transform: translateY(-2px); }
+.icon-btn svg { width: 22px; height: 22px; }
+.thanks { padding-top: 34px; }
+.thanks-big { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
