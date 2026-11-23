@@ -103,14 +103,14 @@ function kitPage(m, s) {
 
   const bars = (rows) => rows.map(([k, v]) => {
     const max = Math.max(...rows.map((x) => x[1]));
-    return `<div class="bar-row"><span>${esc(k)}</span><span class="bar"><i style="width:${(v / max) * 100}%"></i></span><b>${v}%</b></div>`;
+    return `<div class="bar-row"><span>${esc(k)}</span><span class="bar"><i data-w="${(v / max) * 100}%"></i></span><b>${v}%</b></div>`;
   }).join("");
   const g = a.gender || {};
   fill("audience", `
     <div class="card"><h3>Top countries</h3>${bars(a.top_countries || [])}</div>
     <div class="card"><h3>Age</h3>${bars(a.age || [])}</div>
     <div class="card"><h3>Gender</h3>
-      <div class="split"><i style="width:${g.female || 50}%"></i><i style="width:${g.male || 50}%"></i></div>
+      <div class="split"><i data-w="${g.female || 50}%"></i><i data-w="${g.male || 50}%"></i></div>
       <div class="split-key"><span><span class="dot" style="background:var(--accent)"></span>Female ${g.female ?? "–"}%</span>
       <span><span class="dot" style="background:var(--accent-2)"></span>Male ${g.male ?? "–"}%</span></div>
     </div>`);
@@ -157,6 +157,7 @@ function kitPage(m, s) {
   if (document.body.dataset.page === "kit") kitPage(m, s);
   fill("updated", s.updated ? `Stats updated ${date(s.updated)}` : "");
   document.body.classList.add("ready");
+  animate();
 })();
 
 // ---------------------------------------------------------------- email
@@ -202,3 +203,39 @@ document.addEventListener("click", (e) => {
   const u = new URL(a.href);
   emailSheet(decodeURIComponent(u.pathname), u.searchParams.get("subject"));
 });
+
+// ---------------------------------------------------------------- motion
+// Count-up numbers, growing bars. Skipped for people who turn on
+// "reduce motion" on their device.
+function animate() {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const bars = document.querySelectorAll("[data-w]");
+  const nums = document.querySelectorAll(".stat .num");
+  if (reduce || !("IntersectionObserver" in window)) {
+    bars.forEach((b) => (b.style.width = b.dataset.w));
+    return;
+  }
+  const countUp = (el) => {
+    const m = el.textContent.trim().match(/^([\d.]+)(.*)$/);
+    if (!m) return;
+    const final = el.textContent, target = parseFloat(m[1]), suffix = m[2], dec = (m[1].split(".")[1] || "").length;
+    setTimeout(() => (el.textContent = final), 1600);
+    const t0 = performance.now(), dur = 1400;
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = p < 1 ? (target * e).toFixed(dec) + suffix : final;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      if (el.dataset.w) el.style.width = el.dataset.w; else countUp(el);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  bars.forEach((b) => io.observe(b));
+  nums.forEach((n) => io.observe(n));
+}
