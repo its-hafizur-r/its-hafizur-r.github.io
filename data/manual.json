@@ -176,7 +176,7 @@
     "window_days": 30,
     "min_videos": 8,
     "skip_newer_than_days": 0,
-    "top_videos": 9
+    "top_videos": 10
   },
   "tiktok_client_key": ""
 }
