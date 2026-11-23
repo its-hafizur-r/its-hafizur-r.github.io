@@ -132,13 +132,13 @@
     "Halal food finds",
     "London life & shows"
   ],
+  "_brands_help": "Brands I've worked with. name is required. logo is optional: upload the image to assets/brands/ and put its path here. Without a logo the name shows instead.",
+  "brands_title": "Brands I've worked with",
   "brands": [
-    "Shanghai Disneyland",
-    "Shanghai Wild Animal Park",
-    "Coconut Palm Beach Hotel",
-    "High School Musical On Stage",
-    "THE CUBE London",
-    "tuktuk ceylone"
+    {
+      "name": "High School Musical On Stage",
+      "logo": ""
+    }
   ],
   "services": [
     {

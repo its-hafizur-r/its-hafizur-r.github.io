@@ -130,8 +130,17 @@ function kitPage(m, s) {
   else $("styles-sec")?.classList.add("hidden");
 
   fill("pillars", (m.pillars || []).map((x) => `<span class="chip">${esc(x)}</span>`).join(""));
-  fill("brands", (m.brands || []).map((x) => `<span class="chip brand">${esc(x)}</span>`).join(""));
-  if (!(m.brands || []).length) $("brands-sec")?.classList.add("hidden");
+  const brands = (m.brands || []).map((b) => (typeof b === "string" ? { name: b } : b));
+  fill("brands-title", esc(m.brands_title || "Brands I've worked with"));
+  fill("brands", brands.map((b) => {
+    const inner = b.logo
+      ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">`
+      : `<span>${esc(b.name)}</span>`;
+    return b.url
+      ? `<a class="brand-tile" href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
+      : `<div class="brand-tile" title="${esc(b.name)}">${inner}</div>`;
+  }).join(""));
+  if (!brands.length) $("brands-sec")?.classList.add("hidden");
   fill("services", (m.services || []).map((x) => `<div class="card svc"><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`).join(""));
 
   const mail = `mailto:${m.email}?subject=${encodeURIComponent("Collaboration with @" + m.handle)}`;
