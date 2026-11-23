@@ -1,21 +1,21 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-23T20:21:44Z",
+ "updated": "2026-11-23T20:33:30Z",
  "source": "public_profile",
  "profile": {
   "followers": 12964,
   "following": 59,
-  "likes": 2282952,
+  "likes": 2282925,
   "videos": 599
  },
  "recent": {
   "videos_counted": 19,
   "window_days": 30,
-  "avg_views": 12315,
-  "avg_likes": 201,
+  "avg_views": 12320,
+  "avg_likes": 202,
   "avg_comments": 7,
   "avg_shares": 53,
-  "engagement_rate": 2.12,
+  "engagement_rate": 2.13,
   "from": "2026-10-26",
   "to": "2026-11-23"
  },
@@ -36,7 +36,7 @@
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
    "views": 2200000,
    "likes": 316900,
-   "comments": 963,
+   "comments": 962,
    "shares": 57800,
    "created": 1785960208,
    "url": "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
@@ -58,7 +58,7 @@
    "title": "In all my travels One of my Favourite activities ive done in any country; Zhangjiajie Sky Ladder #china #zhangjiajie #travel #itinerary #tra",
    "views": 666500,
    "likes": 49200,
-   "comments": 389,
+   "comments": 388,
    "shares": 10300,
    "created": 1782846699,
    "url": "https://www.tiktok.com/@hafizur_r/video/7657268246541847830",
@@ -80,7 +80,7 @@
    "title": "Missing the dubai vibe, I want to travel again! ✈️ #dubai #dubai🇦🇪 #dubaitravel #luxurytravel #luxurylifestyle #muslim #couplestiktok #trave",
    "views": 432600,
    "likes": 37500,
-   "comments": 86,
+   "comments": 85,
    "shares": 4307,
    "created": 1743274057,
    "url": "https://www.tiktok.com/@hafizur_r/video/7487305044476333334",
@@ -100,7 +100,7 @@
   {
    "id": "7696520317556002070",
    "title": "Daily bugle looking ahh building #shanghai #china #travelchina #travel #itinerary ",
-   "views": 233800,
+   "views": 233900,
    "likes": 14000,
    "comments": 219,
    "shares": 2497,
@@ -118,6 +118,74 @@
    "created": 1789657153,
    "url": "https://www.tiktok.com/@hafizur_r/video/7686518924287970582",
    "cover": "assets/covers/7686518924287970582.jpg"
+  }
+ ],
+ "featured": [
+  {
+   "id": "7694274023546424598",
+   "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
+   "views": 2200000,
+   "likes": 230000,
+   "comments": 478,
+   "shares": 49600,
+   "created": 1791462781,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+   "cover": "assets/covers/7694274023546424598.jpg"
+  },
+  {
+   "id": "7670640672700976417",
+   "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
+   "views": 2200000,
+   "likes": 316900,
+   "comments": 962,
+   "shares": 57800,
+   "created": 1785960208,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
+   "cover": "assets/covers/7670640672700976417.jpg"
+  },
+  {
+   "id": "7694696372934642966",
+   "title": "At this point they should just allow phones on the Tron ride, everyone wants to do the trend! #tron #shanghaidisneyland #disneyworld #disney",
+   "views": 1600000,
+   "likes": 58500,
+   "comments": 245,
+   "shares": 2036,
+   "created": 1791564300,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7694696372934642966",
+   "cover": "assets/covers/7694696372934642966.jpg"
+  },
+  {
+   "id": "7685428540522646806",
+   "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
+   "views": 593100,
+   "likes": 52000,
+   "comments": 143,
+   "shares": 16500,
+   "created": 1789403279,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7685428540522646806",
+   "cover": "assets/covers/7685428540522646806.jpg"
+  },
+  {
+   "id": "7657268246541847830",
+   "title": "In all my travels One of my Favourite activities ive done in any country; Zhangjiajie Sky Ladder #china #zhangjiajie #travel #itinerary #tra",
+   "views": 666500,
+   "likes": 49200,
+   "comments": 388,
+   "shares": 10300,
+   "created": 1782846699,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7657268246541847830",
+   "cover": "assets/covers/7657268246541847830.jpg"
+  },
+  {
+   "id": "7705671677606251798",
+   "title": "Slow days in Sri Lanka  📍Coconut Palm Beach Hotel #srilanka #srilankatiktok #srilankatiktok🇱🇰 #travel #slowlife ",
+   "views": 4310,
+   "likes": 169,
+   "comments": 7,
+   "shares": 24,
+   "created": 1794135600,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7705671677606251798",
+   "cover": "assets/covers/7705671677606251798.jpg"
   }
  ]
 }
