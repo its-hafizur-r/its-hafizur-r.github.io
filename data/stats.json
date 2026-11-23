@@ -1,19 +1,19 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-23T21:29:17Z",
+ "updated": "2026-11-23T21:32:55Z",
  "source": "public_profile",
  "profile": {
   "followers": 12964,
   "following": 59,
-  "likes": 2283106,
+  "likes": 2283114,
   "videos": 599,
-  "total_views": 11552823,
+  "total_views": 11552832,
   "total_views_complete": false
  },
  "recent": {
   "videos_counted": 19,
   "window_days": 30,
-  "avg_views": 12343,
+  "avg_views": 12344,
   "avg_likes": 202,
   "avg_comments": 7,
   "avg_shares": 53,
@@ -59,9 +59,9 @@
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
    "views": 1400000,
-   "likes": 204400,
+   "likes": 204900,
    "comments": 411,
-   "shares": 23100,
+   "shares": 23200,
    "created": 1781718158,
    "url": "https://www.tiktok.com/@hafizur_r/video/7652421190723652886",
    "cover": "assets/covers/7652421190723652886.jpg"
@@ -120,6 +120,17 @@
    "created": 1782837441,
    "url": "https://www.tiktok.com/@hafizur_r/video/7657228482300120342",
    "cover": "assets/covers/7657228482300120342.jpg"
+  },
+  {
+   "id": "7696520317556002070",
+   "title": "Daily bugle looking ahh building #shanghai #china #travelchina #travel #itinerary ",
+   "views": 233900,
+   "likes": 14000,
+   "comments": 219,
+   "shares": 2497,
+   "created": 1791991800,
+   "url": "https://www.tiktok.com/@hafizur_r/video/7696520317556002070",
+   "cover": "assets/covers/7696520317556002070.jpg"
   }
  ],
  "featured": [
@@ -215,9 +226,9 @@
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
    "views": 1400000,
-   "likes": 204400,
+   "likes": 204900,
    "comments": 411,
-   "shares": 23100,
+   "shares": 23200,
    "created": 1781718158,
    "url": "https://www.tiktok.com/@hafizur_r/video/7652421190723652886",
    "cover": "assets/covers/7652421190723652886.jpg"
