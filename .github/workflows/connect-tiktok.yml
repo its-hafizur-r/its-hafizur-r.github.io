@@ -1,0 +1,38 @@
+name: Connect TikTok
+
+# One-time setup (and again if the connection ever expires).
+# 1. Open https://<your site>/connect.html and approve on TikTok.
+# 2. Copy the code it shows, then run this workflow and paste it in.
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "Code from callback.html"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swap code for a refresh token
+        env:
+          CODE: ${{ inputs.code }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+        run: python3 scripts/tiktok_connect.py
+      - name: Save it as the TIKTOK_REFRESH_TOKEN secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::Add the GH_PAT secret first (see SETUP-TIKTOK.md, step 5)."; exit 1
+          fi
+          gh secret set TIKTOK_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < .new_refresh_token
+          rm -f .new_refresh_token
+          gh workflow run sync-stats.yml --repo "$GITHUB_REPOSITORY"
+          echo "Saved. A stats sync has been started."

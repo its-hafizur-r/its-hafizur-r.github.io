@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Inter:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Connect TikTok</title></head>
+<body><main class="wrap narrow" style="padding-top:40px">
+<div class="eyebrow">Owner only</div><h1 style="font-size:28px;margin:6px 0 12px">Connect TikTok</h1>
+<p class="muted" style="margin-bottom:20px">This lets the media kit read your follower count, likes and video stats once a day. It can't post or change anything.</p>
+<p id="msg" class="card hidden" style="margin-bottom:16px"></p>
+<a id="go" class="btn" href="#">Continue with TikTok</a>
+<p class="note" style="margin-top:16px"><a href="index.html">Back to the site</a></p>
+</main>
+<script>
+(async () => {
+  const m = await (await fetch("data/manual.json?" + Date.now())).json();
+  const msg = document.getElementById("msg"), go = document.getElementById("go");
+  if (!m.tiktok_client_key) {
+    msg.textContent = "Add your TikTok Client key to tiktok_client_key in data/manual.json first (see SETUP-TIKTOK.md).";
+    msg.classList.remove("hidden"); go.classList.add("hidden"); return;
+  }
+  const state = Math.random().toString(36).slice(2);
+  sessionStorage.setItem("tt_state", state);
+  go.href = "https://www.tiktok.com/v2/auth/authorize/?" + new URLSearchParams({
+    client_key: m.tiktok_client_key,
+    scope: "user.info.basic,user.info.profile,user.info.stats,video.list",
+    response_type: "code",
+    redirect_uri: m.site_url.replace(/\/$/, "") + "/callback.html",
+    state,
+  });
+})();
+</script></body></html>

@@ -1,0 +1,138 @@
+{
+  "_help": "Edit this file by hand (you can do it on your phone in the GitHub app or github.com). Everything here shows on the page. Live TikTok numbers live in stats.json and update themselves every day, so don't edit that one.",
+  "theme": "sunset",
+  "_theme_options": "sunset, midnight, minimal, matcha",
+  "site_url": "https://its-hafizur-r.github.io",
+  "name": "Hafizur",
+  "handle": "hafizur_r",
+  "tagline": "Travel & Randomness",
+  "location": "East London, UK",
+  "intro": "I make short, honest travel videos: theme parks, value hotels, food finds and the little things that make a place worth the flight. Most of my audience is in the US and UK, mostly 25 to 44.",
+  "email": "Hafizur-r@hotmail.com",
+  "links": {
+    "tiktok": "https://www.tiktok.com/@hafizur_r",
+    "instagram": "https://www.instagram.com/hafizur_r",
+    "beacons": "https://beacons.ai/hafizur_r"
+  },
+  "_bio_links_help": "The buttons on your link-in-bio page, top to bottom. Add, remove or reorder freely. icon can be: kit, tiktok, instagram, mail, link, play, star, plane.",
+  "bio_links": [
+    {
+      "label": "Work with me: media kit",
+      "url": "media-kit.html",
+      "icon": "kit",
+      "highlight": true
+    },
+    {
+      "label": "Most watched: Zootopia Land, Shanghai",
+      "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+      "icon": "play"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/hafizur_r",
+      "icon": "instagram"
+    },
+    {
+      "label": "Email me",
+      "url": "mailto:Hafizur-r@hotmail.com",
+      "icon": "mail"
+    }
+  ],
+  "audience": {
+    "_note": "Copy these from TikTok Studio > Analytics > Viewers (or Beacons) once a month.",
+    "updated": "2026-11-22",
+    "period": "last 30 days",
+    "profile_views": 5800,
+    "impressions": 357500,
+    "top_countries": [
+      [
+        "United States",
+        18.1
+      ],
+      [
+        "United Kingdom",
+        17.0
+      ],
+      [
+        "Thailand",
+        3.5
+      ],
+      [
+        "Indonesia",
+        3.1
+      ],
+      [
+        "France",
+        2.2
+      ]
+    ],
+    "age": [
+      [
+        "18-24",
+        19.8
+      ],
+      [
+        "25-34",
+        42.8
+      ],
+      [
+        "35-44",
+        22.0
+      ],
+      [
+        "45-54",
+        10.3
+      ],
+      [
+        "55+",
+        5.1
+      ]
+    ],
+    "gender": {
+      "female": 52,
+      "male": 48
+    }
+  },
+  "pillars": [
+    "China travel",
+    "Theme parks & attractions",
+    "Beach & resort stays",
+    "Value hotels",
+    "Halal food finds",
+    "London life & shows"
+  ],
+  "brands": [
+    "Shanghai Disneyland",
+    "Shanghai Wild Animal Park",
+    "Coconut Palm Beach Hotel",
+    "High School Musical On Stage",
+    "THE CUBE London",
+    "tuktuk ceylone"
+  ],
+  "services": [
+    {
+      "title": "Dedicated TikTok",
+      "text": "A full video built around your hotel, attraction or product, filmed on location."
+    },
+    {
+      "title": "Hosted stay or visit",
+      "text": "Room tours, park days and experiences, with honest first impressions."
+    },
+    {
+      "title": "UGC for your channels",
+      "text": "Vertical footage and edits you can run on your own accounts and ads."
+    },
+    {
+      "title": "Cross-post to Instagram",
+      "text": "The same video as an Instagram Reel, plus Stories on the day."
+    }
+  ],
+  "stats_settings": {
+    "_note": "How the averages are worked out: videos posted in the last window_days days (at least min_videos videos), leaving out ones newer than skip_newer_than_days because they are still gaining views.",
+    "window_days": 30,
+    "min_videos": 8,
+    "skip_newer_than_days": 0,
+    "top_videos": 9
+  },
+  "tiktok_client_key": ""
+}

@@ -1,0 +1,57 @@
+name: Sync TikTok stats
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # every day, 06:17 UTC
+  workflow_dispatch: {}     # "Run workflow" button for an instant refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-stats
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull latest stats
+        env:
+          # Leave these secrets unset to use public profile stats.
+          # Add all three once the TikTok app is approved (see SETUP-TIKTOK.md).
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: python3 scripts/sync_tiktok.py
+
+      - name: Save a new refresh token if TikTok issued one
+        if: hashFiles('.new_refresh_token') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then
+            gh secret set TIKTOK_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < .new_refresh_token
+            echo "Refresh token updated."
+          else
+            echo "::warning::TikTok issued a new refresh token but GH_PAT is not set, so it could not be saved. Run 'Connect TikTok' again within a year."
+          fi
+          rm -f .new_refresh_token
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "stats-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/stats.json data/videos.json assets
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Daily stats $(date -u +%F)"
+            git push
+          fi

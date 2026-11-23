@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Inter:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>TikTok connected</title></head>
+<body><main class="wrap narrow" style="padding-top:40px">
+<div class="eyebrow">Step 2 of 2</div><h1 id="h" style="font-size:28px;margin:6px 0 12px">Almost done</h1>
+<div id="ok" class="hidden">
+  <p class="muted" style="margin-bottom:14px">Copy this code. It works once and expires in a few minutes.</p>
+  <textarea id="code" class="card" readonly style="width:100%;height:110px;font:14px ui-monospace,monospace;color:var(--ink)"></textarea>
+  <p style="margin:14px 0"><button id="copy" class="btn">Copy code</button></p>
+  <p class="muted">Then open your repo on GitHub, go to <b>Actions</b>, pick <b>Connect TikTok</b>, tap <b>Run workflow</b> and paste the code.</p>
+  <p style="margin-top:14px"><a id="wf" class="btn ghost" href="#">Open the Connect TikTok workflow</a></p>
+</div>
+<p id="err" class="card hidden"></p>
+</main>
+<script>
+const q = new URLSearchParams(location.search);
+const code = q.get("code"), state = q.get("state"), saved = sessionStorage.getItem("tt_state");
+if (code && (!saved || saved === state)) {
+  document.getElementById("ok").classList.remove("hidden");
+  document.getElementById("code").value = code;
+  document.getElementById("copy").onclick = async (e) => {
+    await navigator.clipboard.writeText(code); e.target.textContent = "Copied";
+  };
+  const owner = location.hostname.split(".")[0];
+  document.getElementById("wf").href = "https://github.com/" + owner + "/" + location.hostname + "/actions/workflows/connect-tiktok.yml";
+} else {
+  document.getElementById("h").textContent = "That didn't work";
+  const e = document.getElementById("err");
+  e.textContent = q.get("error_description") || q.get("error") || "No code came back from TikTok. Open connect.html and try again.";
+  e.classList.remove("hidden");
+}
+</script></body></html>

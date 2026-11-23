@@ -1,0 +1,3 @@
+.new_refresh_token
+*.tmp
+__pycache__/
