@@ -299,3 +299,4 @@ footer a { color: var(--muted); }
 .brand-cap small { display: block; font-size: 9px; margin-top: 2px; opacity: .85; }
 .brand-tile img[src$="coconut-palm-beach.png"] { height: 78px; }
 .brand-cap:has(small) { letter-spacing: .14em; padding-left: .14em; font-size: 10px; text-align: center; white-space: nowrap; }
+@media (min-width: 720px) { #styles.vid-scroller { grid-template-columns: repeat(6, 1fr); } }
