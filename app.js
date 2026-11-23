@@ -66,10 +66,13 @@ function hero(m) {
 }
 
 function bioPage(m, s) {
-  fill("links", (m.bio_links || []).map((l) => `
+  const btn = (l) => `
     <a class="link-btn${l.highlight ? " highlight" : ""}" href="${esc(l.url)}"${/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : ""}>
       <span class="ic">${icon(l.icon)}</span><span class="lbl">${esc(l.label)}</span><span class="arrow">${icon("arrow")}</span>
-    </a>`).join(""));
+    </a>`;
+  const all = m.bio_links || [];
+  fill("links", all.filter((l) => !l.bottom).map(btn).join(""));
+  fill("links-bottom", all.filter((l) => l.bottom).map(btn).join(""));
   featured(m, s);
   const L = m.links || {};
   const icons = [

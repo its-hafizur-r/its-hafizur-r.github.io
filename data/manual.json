@@ -14,7 +14,7 @@
     "instagram": "https://www.instagram.com/hafizur_r",
     "beacons": "https://beacons.ai/hafizur_r"
   },
-  "_bio_links_help": "The buttons on your link-in-bio page, top to bottom. Add, remove or reorder freely. icon can be: kit, tiktok, instagram, mail, link, play, star, plane.",
+  "_bio_links_help": "The buttons on your link-in-bio page, top to bottom. Add, remove or reorder freely. icon can be: kit, tiktok, instagram, mail, link, play, star, plane. Add \"bottom\": true to put a button below the videos.",
   "bio_links": [
     {
       "label": "Work with me: media kit",
@@ -23,14 +23,10 @@
       "highlight": true
     },
     {
-      "label": "Instagram",
-      "url": "https://www.instagram.com/hafizur_r",
-      "icon": "instagram"
-    },
-    {
       "label": "Email me",
       "url": "mailto:Hafizur-r@hotmail.com",
-      "icon": "mail"
+      "icon": "mail",
+      "bottom": true
     }
   ],
   "_featured_help": "Video tiles on your home page, in this order. Paste TikTok video links (or just the long number). The tiles' pictures and view counts fill in a couple of minutes after you save. Leave the list empty [] to hide the section.",
