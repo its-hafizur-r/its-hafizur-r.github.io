@@ -7,7 +7,13 @@
   "handle": "hafizur_r",
   "tagline": "Travel & Randomness",
   "location": "London, UK",
-  "intro": "I make short, honest travel videos: theme parks, value hotels, food finds and the little things that make a place worth the flight. Most of my audience is in the US and UK, mostly 25 to 44.",
+  "intro": [
+    "Hey! I’m Hafizur, a London-based content creator with a background in pharmacy and a passion for travel, lifestyle and visual storytelling.",
+    "I love creating videos around the things I’m genuinely passionate about, whether that’s exploring new destinations, discovering unique experiences or capturing everyday moments. I aim to make my content relatable, entertaining and engaging, connecting with audiences through authentic storytelling.",
+    "From cinematic, visually captivating videos to fun, relatable content, I enjoy experimenting with different styles and bringing fresh, creative ideas to life. I’m always thinking of new and unique ways to capture experiences and showcase brands.",
+    "I’ve grown my platform organically through authentic content that resonates with audiences. My focus is on creating shareable videos that reach beyond my existing audience, generating hundreds of thousands of views and, at times, millions.",
+    "I’m always looking to collaborate with brands, hotels and businesses to create original content that showcases their offerings, captures attention and leaves a lasting impression."
+  ],
   "_style_videos_help": "Media kit 'Video styles' section (above Top videos). One entry per style: paste the TikTok link as url and a short style name as label. Leave the list empty [] to hide the section.",
   "style_videos_title": "Video styles",
   "style_videos": [

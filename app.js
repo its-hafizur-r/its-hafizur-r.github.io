@@ -86,7 +86,7 @@ function bioPage(m, s) {
 }
 
 function kitPage(m, s) {
-  fill("intro", esc(m.intro));
+  fill("intro", [].concat(m.intro || []).map((x) => `<p>${esc(x)}</p>`).join(""));
   const p = s.profile || {}, r = s.recent || {}, a = m.audience || {};
   const tv = p.total_views != null ? short(p.total_views) + (p.total_views_complete ? "" : "+") : "–";
   const tiles = [
