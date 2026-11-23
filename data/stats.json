@@ -6,7 +6,9 @@
   "followers": 12964,
   "following": 59,
   "likes": 2282940,
-  "videos": 599
+  "videos": 599,
+  "total_views": 9227319,
+  "total_views_complete": false
  },
  "recent": {
   "videos_counted": 19,

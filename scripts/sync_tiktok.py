@@ -257,7 +257,7 @@ def main():
         if m:
             featured_ids.append(m.group(1))
     profile = src.profile()
-    videos = src.videos(extra=featured_ids) if isinstance(src, PublicPages) else src.videos()
+    videos = src.videos(extra=featured_ids) if isinstance(src, PublicPages) else src.videos(limit=2000)
     by_id = {str(v["id"]): v for v in videos}
     missing = [i for i in featured_ids if i not in by_id]
     if missing and isinstance(src, TikTokAPI):
@@ -290,11 +290,15 @@ def main():
     if profile.get("avatar_url"):
         fetch_cover(profile["avatar_url"], avatar)
 
+    total_views = sum(v["views"] for v in videos)
     stats = {
         "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
         "updated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": src.name,
-        "profile": {k: profile[k] for k in ("followers", "following", "likes", "videos")},
+        "profile": {k: profile[k] for k in ("followers", "following", "likes", "videos")}
+        | {"total_views": total_views,
+           # True only when every video on the account was counted (API mode).
+           "total_views_complete": len(videos) >= profile["videos"]},
         "recent": recent or old.get("recent"),
         "top_videos": top_out,
         "featured": featured_out,

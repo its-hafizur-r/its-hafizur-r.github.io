@@ -261,3 +261,4 @@ footer a { color: var(--muted); }
 .icon-btn svg { width: 22px; height: 22px; }
 .thanks { padding-top: 34px; }
 .thanks-big { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+@media (min-width: 720px) { .stat-grid { grid-template-columns: repeat(3, 1fr); } }

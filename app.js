@@ -87,19 +87,18 @@ function bioPage(m, s) {
 function kitPage(m, s) {
   fill("intro", esc(m.intro));
   const p = s.profile || {}, r = s.recent || {}, a = m.audience || {};
+  const tv = p.total_views != null ? short(p.total_views) + (p.total_views_complete ? "" : "+") : "–";
   const tiles = [
     ["Followers", short(p.followers), true],
+    ["Total views", tv],
     ["Total likes", short(p.likes)],
-    ["Avg views", short(r.avg_views)],
-    ["Engagement rate", r.engagement_rate != null ? r.engagement_rate.toFixed(1) + "%" : "–"],
-    ["Avg likes", short(r.avg_likes)],
-    ["Videos posted", short(p.videos)],
+    ["Avg views (last 30 days)", short(r.avg_views)],
     [`Profile views (${esc(a.period || "30 days")})`, short(a.profile_views)],
     [`Impressions (${esc(a.period || "30 days")})`, short(a.impressions)],
   ].filter((t) => t[1] !== "–");
   fill("stats", tiles.map(([l, v, f]) => `<div class="stat${f ? " feature" : ""}"><div class="num">${v}</div><div class="lab">${l}</div></div>`).join(""));
   fill("stats-note", r.videos_counted
-    ? `Averages and engagement rate cover the ${r.videos_counted} videos I posted ${date(r.from)} to ${date(r.to)}. Engagement rate = (likes + comments + shares) ÷ views. Updated ${date(s.updated)}.`
+    ? `Average views cover the ${r.videos_counted} videos I posted ${date(r.from)} to ${date(r.to)}. Updated ${date(s.updated)}.`
     : "");
 
   const bars = (rows) => rows.map(([k, v]) => {
