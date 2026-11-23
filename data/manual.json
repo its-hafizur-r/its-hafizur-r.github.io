@@ -200,5 +200,7 @@
     "skip_newer_than_days": 0,
     "top_videos": 12
   },
-  "tiktok_client_key": ""
+  "tiktok_client_key": "",
+  "avatar_video": "",
+  "_avatar_video_help": "Optional short silent clip (mp4) in assets/ that plays inside the profile photo every few seconds on the media kit. Leave empty to show just the photo."
 }

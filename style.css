@@ -336,3 +336,10 @@ footer a { color: var(--muted); }
   .btn:not(.ghost)::after, .link-btn.highlight::after { animation: none; display: none; }
   .bar i, .split i { transition: none; }
 }
+
+/* moving profile photo */
+.avatar-wrap { position: relative; width: 116px; height: 116px; margin: 0 auto 12px; }
+.avatar-wrap .avatar { margin: 0; position: absolute; inset: 0; }
+.avatar-vid { opacity: 0; transition: opacity .35s ease; object-fit: cover; }
+.avatar-wrap.playing .avatar-vid { opacity: 1; }
+@media (min-width: 720px) { .avatar-wrap { width: 140px; height: 140px; } }

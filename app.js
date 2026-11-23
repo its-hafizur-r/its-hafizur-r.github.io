@@ -158,6 +158,7 @@ function kitPage(m, s) {
   fill("updated", s.updated ? `Stats updated ${date(s.updated)}` : "");
   document.body.classList.add("ready");
   animate();
+  avatarVideo(m);
 })();
 
 // ---------------------------------------------------------------- email
@@ -238,4 +239,30 @@ function animate() {
   }, { threshold: 0.4 });
   bars.forEach((b) => io.observe(b));
   nums.forEach((n) => io.observe(n));
+}
+
+// ------------------------------------------------- moving profile photo
+// Plays manual.json avatar_video inside the photo circle now and then.
+function avatarVideo(m) {
+  const img = $("avatar");
+  if (!img || !m.avatar_video || document.body.dataset.page !== "kit") return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const wrap = document.createElement("div");
+  wrap.className = "avatar-wrap";
+  img.replaceWith(wrap);
+  wrap.appendChild(img);
+  const v = document.createElement("video");
+  Object.assign(v, { src: m.avatar_video, muted: true, playsInline: true, preload: "auto" });
+  v.setAttribute("muted", ""); v.setAttribute("playsinline", "");
+  v.className = "avatar avatar-vid";
+  wrap.appendChild(v);
+  let visible = true;
+  new IntersectionObserver(([e]) => (visible = e.isIntersecting)).observe(wrap);
+  const play = () => {
+    if (!visible || document.hidden) return setTimeout(play, 3000);
+    v.currentTime = 0;
+    v.play().then(() => wrap.classList.add("playing")).catch(() => {});
+  };
+  v.addEventListener("ended", () => { wrap.classList.remove("playing"); setTimeout(play, 8000); });
+  setTimeout(play, 2500);
 }
