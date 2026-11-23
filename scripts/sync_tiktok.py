@@ -252,9 +252,9 @@ def main():
     old = load(STATS, {})
     now = time.time()
     featured_ids = []
-    for f in manual.get("featured_videos", []):
+    for f in manual.get("featured_videos", []) + [x.get("url", "") for x in manual.get("style_videos", [])]:
         m = re.search(r"(\d{17,20})", str(f))
-        if m:
+        if m and m.group(1) not in featured_ids:
             featured_ids.append(m.group(1))
     profile = src.profile()
     videos = src.videos(extra=featured_ids) if isinstance(src, PublicPages) else src.videos(limit=2000)

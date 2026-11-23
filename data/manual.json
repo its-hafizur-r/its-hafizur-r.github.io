@@ -8,6 +8,9 @@
   "tagline": "Travel & Randomness",
   "location": "London, UK",
   "intro": "I make short, honest travel videos: theme parks, value hotels, food finds and the little things that make a place worth the flight. Most of my audience is in the US and UK, mostly 25 to 44.",
+  "_style_videos_help": "Media kit 'Video styles' section (above Top videos). One entry per style: paste the TikTok link as url and a short style name as label. Leave the list empty [] to hide the section.",
+  "style_videos_title": "Video styles",
+  "style_videos": [],
   "email": "Hafizur-r@hotmail.com",
   "links": {
     "tiktok": "https://www.tiktok.com/@hafizur_r",
