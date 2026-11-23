@@ -232,3 +232,14 @@ footer a { color: var(--muted); }
   .hero { margin-top: 0; }
   body { background: #fff; }
 }
+
+/* email sheet */
+.sheet-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: none; align-items: flex-end; justify-content: center; z-index: 50; }
+.sheet-bg.open { display: flex; }
+.sheet { background: var(--bg); color: var(--ink); width: 100%; max-width: 460px; border-radius: 24px 24px 0 0; padding: 22px 20px 28px; text-align: center; }
+.mail-addr { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 700; margin: 6px 0 16px; word-break: break-all; user-select: all; }
+.sheet > .btn { width: 100%; }
+.mail-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.mail-opts .btn { padding: 10px 8px; font-size: 14px; }
+.sheet-close { background: none; border: 0; color: var(--muted); font: inherit; margin-top: 14px; cursor: pointer; }
+@media (min-width: 720px) { .sheet-bg { align-items: center; } .sheet { border-radius: 24px; } }

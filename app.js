@@ -117,3 +117,47 @@ function kitPage(m, s) {
   fill("updated", s.updated ? `Stats updated ${date(s.updated)}` : "");
   document.body.classList.add("ready");
 })();
+
+// ---------------------------------------------------------------- email
+// mailto: links do nothing on laptops without a mail app and inside TikTok's
+// in-app browser, so every email button opens this small sheet instead.
+function emailSheet(addr, subject) {
+  let el = document.getElementById("mail-sheet");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "mail-sheet";
+    el.className = "sheet-bg";
+    document.body.appendChild(el);
+    el.addEventListener("click", (e) => { if (e.target === el || e.target.dataset.close != null) el.classList.remove("open"); });
+  }
+  const s = encodeURIComponent(subject || "");
+  const to = encodeURIComponent(addr);
+  el.innerHTML = `
+    <div class="sheet" role="dialog" aria-label="Email">
+      <div class="eyebrow">Email me</div>
+      <div class="mail-addr">${esc(addr)}</div>
+      <button class="btn" id="mail-copy">Copy email address</button>
+      <div class="mail-opts">
+        <a class="btn ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${s}" target="_blank" rel="noopener">Gmail</a>
+        <a class="btn ghost" href="https://outlook.live.com/mail/0/deeplink/compose?to=${to}&subject=${s}" target="_blank" rel="noopener">Outlook</a>
+        <a class="btn ghost" href="mailto:${esc(addr)}?subject=${s}">Mail app</a>
+      </div>
+      <button class="sheet-close" data-close aria-label="Close">Close</button>
+    </div>`;
+  el.querySelector("#mail-copy").onclick = async (e) => {
+    try { await navigator.clipboard.writeText(addr); }
+    catch {
+      const r = document.createRange(); r.selectNodeContents(el.querySelector(".mail-addr"));
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand("copy");
+    }
+    e.target.textContent = "Copied ✓";
+  };
+  el.classList.add("open");
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="mailto:"]');
+  if (!a || a.closest("#mail-sheet")) return;
+  e.preventDefault();
+  const u = new URL(a.href);
+  emailSheet(decodeURIComponent(u.pathname), u.searchParams.get("subject"));
+});
