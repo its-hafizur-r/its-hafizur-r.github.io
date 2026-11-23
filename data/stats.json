@@ -1,17 +1,17 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-23T20:37:35Z",
+ "updated": "2026-11-23T20:42:09Z",
  "source": "public_profile",
  "profile": {
   "followers": 12964,
   "following": 59,
-  "likes": 2282933,
+  "likes": 2282940,
   "videos": 599
  },
  "recent": {
   "videos_counted": 19,
   "window_days": 30,
-  "avg_views": 12321,
+  "avg_views": 12322,
   "avg_likes": 202,
   "avg_comments": 7,
   "avg_shares": 53,
@@ -24,7 +24,7 @@
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
    "views": 2200000,
-   "likes": 230000,
+   "likes": 230100,
    "comments": 478,
    "shares": 49600,
    "created": 1791462781,
@@ -125,7 +125,7 @@
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
    "views": 2200000,
-   "likes": 230000,
+   "likes": 230100,
    "comments": 478,
    "shares": 49600,
    "created": 1791462781,
