@@ -353,3 +353,4 @@ footer a { color: var(--muted); }
   .home .feat-h { max-width: none; }
   .home #featured.vid-scroller { grid-template-columns: repeat(6, 1fr); }
 }
+.kit-thanks { padding-bottom: 0; }
