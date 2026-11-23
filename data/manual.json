@@ -132,20 +132,19 @@
     "Halal food finds",
     "London life & shows"
   ],
-  "_brands_help": "Brands I've worked with. name is required. logo is optional: upload the image to assets/brands/ and put its path here. Without a logo the name shows instead. Add \"fill\": true when the image is a photo or poster rather than a logo on a plain background. \"bg\" sets the tile colour behind a logo, \"caption\" adds a small line of text under it.",
+  "_brands_help": "Brands I've worked with, shown as logos straight on the page. name is required. logo: a PNG with a transparent background in assets/brands/ (without one the name shows instead). caption: small text under the logo. shadow: true adds a soft shadow for light logos.",
   "brands_title": "Brands I've worked with",
   "brands": [
     {
       "name": "High School Musical On Stage",
-      "logo": "assets/brands/high-school-musical.jpg",
-      "bg": "#7a0505",
-      "fit": true
+      "logo": "assets/brands/high-school-musical.png",
+      "shadow": true
     },
     {
       "name": "Angsana Velavaru, Maldives",
-      "logo": "assets/brands/angsana-velavaru.jpg",
-      "bg": "#b6531a",
-      "caption": "MALDIVES"
+      "logo": "assets/brands/angsana-velavaru.png",
+      "caption": "MALDIVES",
+      "caption_color": "#b6531a"
     }
   ],
   "services": [
