@@ -132,12 +132,13 @@
     "Halal food finds",
     "London life & shows"
   ],
-  "_brands_help": "Brands I've worked with. name is required. logo is optional: upload the image to assets/brands/ and put its path here. Without a logo the name shows instead.",
+  "_brands_help": "Brands I've worked with. name is required. logo is optional: upload the image to assets/brands/ and put its path here. Without a logo the name shows instead. Add \"fill\": true when the image is a photo or poster rather than a logo on a plain background.",
   "brands_title": "Brands I've worked with",
   "brands": [
     {
       "name": "High School Musical On Stage",
-      "logo": ""
+      "logo": "assets/brands/high-school-musical.jpg",
+      "fill": true
     }
   ],
   "services": [

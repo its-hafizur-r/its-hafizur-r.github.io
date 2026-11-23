@@ -137,8 +137,8 @@ function kitPage(m, s) {
       ? `<img src="${esc(b.logo)}" alt="${esc(b.name)}" loading="lazy">`
       : `<span>${esc(b.name)}</span>`;
     return b.url
-      ? `<a class="brand-tile" href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
-      : `<div class="brand-tile" title="${esc(b.name)}">${inner}</div>`;
+      ? `<a class="brand-tile${b.fill ? " fill" : ""}" href="${esc(b.url)}" target="_blank" rel="noopener" title="${esc(b.name)}">${inner}</a>`
+      : `<div class="brand-tile${b.fill ? " fill" : ""}" title="${esc(b.name)}">${inner}</div>`;
   }).join(""));
   if (!brands.length) $("brands-sec")?.classList.add("hidden");
   fill("services", (m.services || []).map((x) => `<div class="card svc"><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`).join(""));
