@@ -41,7 +41,6 @@ function vidTile(v) {
   return `
     <a class="vid${v.cover ? "" : " noimg"}" href="${esc(v.url)}" target="_blank" rel="noopener">
       ${v.cover ? `<img src="${esc(v.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode.classList.add('noimg')">` : ""}
-      ${v.label ? `<span class="style-tag">${esc(v.label)}</span>` : ""}
       <span class="shade"></span>
       <span class="meta">${v.views != null ? `<span class="views">${icon("play")}${short(v.views)}</span>` : ""}<span class="t">${esc(title)}</span></span>
     </a>`;
@@ -124,7 +123,7 @@ function kitPage(m, s) {
     const id = (String(x.url || "").match(/\d{17,20}/) || [])[0];
     if (!id) return "";
     const v = known[id] || { id, url: `https://www.tiktok.com/@${m.handle}/video/${id}`, title: "" };
-    return vidTile({ ...v, label: x.label });
+    return `<div class="style-item">${vidTile(v)}<div class="style-name">${esc(x.label || "")}</div></div>`;
   }).join("");
   if (styles) { fill("styles-title", esc(m.style_videos_title || "Video styles")); fill("styles", styles); }
   else $("styles-sec")?.classList.add("hidden");

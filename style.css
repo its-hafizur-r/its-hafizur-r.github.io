@@ -276,13 +276,10 @@ footer a { color: var(--muted); }
 .thanks-big { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
 @media (min-width: 720px) { .stat-grid { grid-template-columns: repeat(3, 1fr); } }
 
-/* style label on video tiles */
-.style-tag {
-  position: absolute; top: 10px; left: 10px; z-index: 2; max-width: calc(100% - 20px);
-  background: var(--accent); color: var(--accent-ink);
-  font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px;
-  line-height: 1.25;
-}
+/* video style names (shown under each tile) */
+.style-item { display: flex; flex-direction: column; gap: 8px; scroll-snap-align: start; }
+.style-name { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 15px; line-height: 1.2; color: var(--ink); padding: 0 2px; }
+.style-name::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 7px; vertical-align: 1px; }
 .vid-scroller { display: grid; grid-auto-flow: column; grid-auto-columns: 46%; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; margin: 0 -18px; padding-left: 18px; padding-right: 18px; scrollbar-width: none; }
 .vid-scroller::-webkit-scrollbar { display: none; }
 .vid-scroller .vid { scroll-snap-align: start; }
