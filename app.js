@@ -152,6 +152,7 @@ function kitPage(m, s) {
 (async () => {
   const [m, s] = await Promise.all([getJSON("data/manual.json"), getJSON("data/stats.json")]);
   document.documentElement.dataset.theme = m.theme || "sunset";
+  if (m.banner === false) document.documentElement.classList.add("no-banner");
   hero(m);
   if (document.body.dataset.page === "bio") bioPage(m, s);
   if (document.body.dataset.page === "kit") kitPage(m, s);

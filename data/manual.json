@@ -1,7 +1,9 @@
 {
   "_help": "Edit this file by hand (you can do it on your phone in the GitHub app or github.com). Everything here shows on the page. Live TikTok numbers live in stats.json and update themselves every day, so don't edit that one.",
-  "theme": "sunset",
-  "_theme_options": "sunset, midnight, minimal, matcha",
+  "theme": "mocha",
+  "_theme_options": "mocha (brown), sunset, midnight, minimal, matcha",
+  "banner": false,
+  "_banner_help": "true shows the coloured strip with the plane at the top, false hides it.",
   "site_url": "https://its-hafizur-r.github.io",
   "name": "Hafizur",
   "handle": "hafizur_r",

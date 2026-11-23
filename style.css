@@ -52,6 +52,19 @@
   --bar: #dbe7c6;
 }
 
+[data-theme="mocha"] {
+  --bg: #f6efe6;
+  --card: #fffaf4;
+  --ink: #2b1d14;
+  --muted: #7a6656;
+  --line: #eadcc9;
+  --accent: #7b4a2a;
+  --accent-ink: #fffaf4;
+  --accent-2: #c08a4e;
+  --sky: linear-gradient(160deg, #c08a4e 0%, #7b4a2a 60%, #3e2516 100%);
+  --bar: #ead7c0;
+}
+
 /* ------------------------------------------------------------------ base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
@@ -300,3 +313,8 @@ footer a { color: var(--muted); }
 .brand-tile img[src$="coconut-palm-beach.png"] { height: 78px; }
 .brand-cap:has(small) { letter-spacing: .14em; padding-left: .14em; font-size: 10px; text-align: center; white-space: nowrap; }
 @media (min-width: 720px) { #styles.vid-scroller, #videos.vid-scroller { grid-template-columns: repeat(6, 1fr); } }
+
+/* no banner */
+.no-banner .sky { display: none; }
+.no-banner .hero { margin-top: 0; padding-top: 44px; }
+.no-banner .avatar { border-color: var(--card); }
