@@ -84,7 +84,25 @@ function bioPage(m, s) {
     `<a class="icon-btn" href="${esc(url)}" aria-label="${name}" title="${name}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener"' : ""}>${icon(ic)}</a>`).join(""));
 }
 
+// A tailored kit (/media-kit/<key>/) swaps in its own videos, brand order and packages.
+function applyKit(m, key) {
+  const k = (m.kits || {})[key];
+  if (!k) return m;
+  const out = { ...m };
+  if (k.pitch) out.intro = [].concat(m.intro || [], k.pitch);
+  for (const f of ["style_videos_title", "style_videos", "services"]) if (k[f]) out[f] = k[f];
+  if (k.brands_first) {
+    const name = (b) => (typeof b === "string" ? b : b.name || "").toLowerCase();
+    const rank = (b) => { const i = k.brands_first.findIndex((n) => name(b).includes(n.toLowerCase())); return i < 0 ? 99 : i; };
+    out.brands = [...(m.brands || [])].sort((a, b) => rank(a) - rank(b));
+  }
+  fill("kit-label", "Media kit · " + esc(k.label || key));
+  if (k.label) document.title = `${k.label} media kit · ${m.name} (@${m.handle})`;
+  return out;
+}
+
 function kitPage(m, s) {
+  if (document.body.dataset.kit) m = applyKit(m, document.body.dataset.kit);
   fill("intro", [].concat(m.intro || []).map((x) => `<p>${esc(x)}</p>`).join(""));
   const p = s.profile || {}, r = s.recent || {}, a = m.audience || {};
   const tv = p.total_views != null ? short(p.total_views) + (p.total_views_complete ? "" : "+") : "–";

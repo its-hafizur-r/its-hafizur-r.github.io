@@ -252,7 +252,10 @@ def main():
     old = load(STATS, {})
     now = time.time()
     featured_ids = []
-    for f in manual.get("featured_videos", []) + [x.get("url", "") for x in manual.get("style_videos", [])]:
+    styles = list(manual.get("style_videos", []))
+    for kit in (manual.get("kits") or {}).values():
+        styles += kit.get("style_videos", [])
+    for f in manual.get("featured_videos", []) + [x.get("url", "") for x in styles]:
         m = re.search(r"(\d{17,20})", str(f))
         if m and m.group(1) not in featured_ids:
             featured_ids.append(m.group(1))

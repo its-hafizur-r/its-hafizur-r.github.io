@@ -202,5 +202,189 @@
   },
   "tiktok_client_key": "",
   "avatar_video": "",
-  "_avatar_video_help": "Optional short silent clip (mp4) in assets/ that plays inside the profile photo every few seconds on the media kit. Leave empty to show just the photo."
+  "_avatar_video_help": "Optional short silent clip (mp4) in assets/ that plays inside the profile photo every few seconds on the media kit. Leave empty to show just the photo.",
+  "_kits_help": "Tailored media kits, each with its own link: /media-kit/<key>/ (e.g. /media-kit/travel/). Anything set here replaces the general kit's version on that page: label, pitch (extra About me paragraph), style_videos_title, style_videos, brands_first (brand names to show first), services. After adding a new kit key, run: python3 scripts/make_kits.py",
+  "kits": {
+    "travel": {
+      "label": "Travel & hospitality",
+      "pitch": "For hotels, resorts, tourism boards and attractions, I film the stay or visit the way a real guest experiences it, from the first room reveal to the views, food and activities, so viewers can picture themselves there and want to book.",
+      "style_videos_title": "Travel content",
+      "style_videos": [
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7648241796643867926",
+          "label": "Hotel showcase"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7652421190723652886",
+          "label": "Scenic reveal"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7376007870606773537",
+          "label": "Cinematic travel film"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7657228482300120342",
+          "label": "Experience vlog"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7705671677606251798",
+          "label": "Slow travel stay"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7487305044476333334",
+          "label": "Luxury travel"
+        }
+      ],
+      "brands_first": [
+        "Angsana Velavaru",
+        "Coconut Palm Beach"
+      ],
+      "services": [
+        {
+          "title": "Hosted stay",
+          "text": "Room tours, facilities, food and the views, with honest first impressions filmed during a real stay."
+        },
+        {
+          "title": "Dedicated TikTok",
+          "text": "A full video built around your hotel, resort or destination, filmed on location."
+        },
+        {
+          "title": "Experience day",
+          "text": "A full day at your attraction, tour or activity, filmed POV so viewers feel like they're there."
+        },
+        {
+          "title": "Destination series",
+          "text": "Several videos across a trip, covering where to stay, what to do and what to eat, so your destination stays in viewers' feeds."
+        },
+        {
+          "title": "Cinematic showcase",
+          "text": "A short cinematic film of your property or destination that works on TikTok and on your own channels."
+        },
+        {
+          "title": "UGC for your channels",
+          "text": "Vertical footage and edits you can run on your own accounts and ads."
+        }
+      ]
+    },
+    "fashion": {
+      "label": "Fashion & lifestyle",
+      "pitch": "For clothing, eyewear, fragrance and lifestyle brands, I put your products into the places I travel and the moments I film, so they're seen being worn and used in real life, not in a studio.",
+      "style_videos_title": "Lifestyle content",
+      "style_videos": [
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7487305044476333334",
+          "label": "Luxury lifestyle"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+          "label": "Trend-led reel"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7625358427052592406",
+          "label": "Product review"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7376007870606773537",
+          "label": "Cinematic film"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7368945163617537312",
+          "label": "Holiday style"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7652421190723652886",
+          "label": "Scenic backdrop"
+        }
+      ],
+      "brands_first": [
+        "Firmoo"
+      ],
+      "services": [
+        {
+          "title": "Styled on the trip",
+          "text": "Your pieces worn across a trip, filmed in standout locations so they look their best."
+        },
+        {
+          "title": "Try-on & first impressions",
+          "text": "An honest try-on or unboxing with my real reactions, the kind of video viewers trust."
+        },
+        {
+          "title": "Product in the wild",
+          "text": "Your product used naturally in my travel and everyday videos, not a hard ad, so it feels real."
+        },
+        {
+          "title": "Cinematic lookbook",
+          "text": "A short cinematic film of a collection in a scenic setting, made for TikTok and your own channels."
+        },
+        {
+          "title": "Launch & drop coverage",
+          "text": "New collections and drops covered on the day so your news reaches people fast."
+        },
+        {
+          "title": "UGC for your channels",
+          "text": "Vertical footage and edits you can run on your own accounts and ads."
+        }
+      ]
+    },
+    "events": {
+      "label": "Entertainment & events",
+      "pitch": "For shows, theme parks, attractions and events, I capture the moments people talk about, from the build-up to the best bits and the reactions, and my theme park and ride videos have reached millions.",
+      "style_videos_title": "Entertainment content",
+      "style_videos": [
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
+          "label": "Ride POV"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598",
+          "label": "Trend-led reel"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7694696372934642966",
+          "label": "Crowd moment"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7695791861096615190",
+          "label": "Theme park day"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7657268246541847830",
+          "label": "Thrill experience"
+        },
+        {
+          "url": "https://www.tiktok.com/@hafizur_r/video/7685428540522646806",
+          "label": "Attraction visit"
+        }
+      ],
+      "brands_first": [
+        "High School Musical"
+      ],
+      "services": [
+        {
+          "title": "Show or event night",
+          "text": "Arrivals, atmosphere, the show and real reactions, covered on the night."
+        },
+        {
+          "title": "Experience day",
+          "text": "A full day at your park, attraction or venue, from first look to the best moments, filmed POV."
+        },
+        {
+          "title": "Launch & opening coverage",
+          "text": "New rides, shows and openings covered on the day so your news reaches people fast."
+        },
+        {
+          "title": "Trend-led reel",
+          "text": "Your experience built into a trend people already love, made to be shared."
+        },
+        {
+          "title": "Behind the scenes",
+          "text": "A look backstage or behind the build, giving viewers access they can't get anywhere else."
+        },
+        {
+          "title": "UGC for your channels",
+          "text": "Vertical footage and edits you can run on your own accounts and ads."
+        }
+      ]
+    }
+  }
 }
