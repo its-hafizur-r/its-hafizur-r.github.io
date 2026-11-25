@@ -298,7 +298,8 @@ function bgPhotos(m) {
   const wall = document.createElement("div");
   wall.className = "bg-photos";
   wall.setAttribute("aria-hidden", "true");
-  const list = [...ids, ...ids, ...ids].slice(0, Math.max(6, ids.length));
+  const list = ids.slice(0, 6);
+  wall.style.setProperty("--n", list.length);
   wall.innerHTML = list.map((id) => `<img src="${esc(id)}" alt="" onerror="this.style.visibility='hidden'">`).join("");
   document.body.prepend(wall);
   document.body.classList.add("has-bg");

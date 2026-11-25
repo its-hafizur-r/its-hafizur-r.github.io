@@ -326,7 +326,10 @@
           "text": "Vertical footage and edits you can run on your own accounts and ads."
         }
       ],
-      "bg_photos": []
+      "bg_photos": [
+        "assets/bg/fashion-1.jpg",
+        "assets/bg/fashion-2.jpg"
+      ]
     },
     "events": {
       "label": "Entertainment & events",
