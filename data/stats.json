@@ -1,23 +1,23 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-25T11:05:02Z",
+ "updated": "2026-11-25T11:44:55Z",
  "source": "public_profile",
  "profile": {
   "followers": 12978,
   "following": 59,
-  "likes": 2289110,
+  "likes": 2289229,
   "videos": 600,
-  "total_views": 11594542,
+  "total_views": 11595329,
   "total_views_complete": false
  },
  "recent": {
   "videos_counted": 20,
   "window_days": 30,
-  "avg_views": 12192,
-  "avg_likes": 215,
+  "avg_views": 12221,
+  "avg_likes": 216,
   "avg_comments": 7,
   "avg_shares": 55,
-  "engagement_rate": 2.27,
+  "engagement_rate": 2.28,
   "from": "2026-10-26",
   "to": "2026-11-24"
  },
@@ -38,7 +38,7 @@
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
    "views": 2200000,
    "likes": 317200,
-   "comments": 962,
+   "comments": 963,
    "shares": 57900,
    "created": 1785960208,
    "url": "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
@@ -50,7 +50,7 @@
    "views": 1600000,
    "likes": 59000,
    "comments": 247,
-   "shares": 2064,
+   "shares": 2065,
    "created": 1791564300,
    "url": "https://www.tiktok.com/@hafizur_r/video/7694696372934642966",
    "cover": "assets/covers/7694696372934642966.jpg"
@@ -91,7 +91,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 597900,
+   "views": 598000,
    "likes": 52400,
    "comments": 146,
    "shares": 16700,
@@ -124,7 +124,7 @@
   {
    "id": "7696520317556002070",
    "title": "Daily bugle looking ahh building #shanghai #china #travelchina #travel #itinerary ",
-   "views": 236400,
+   "views": 236500,
    "likes": 14200,
    "comments": 223,
    "shares": 2554,
@@ -172,7 +172,7 @@
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
    "views": 2200000,
    "likes": 317200,
-   "comments": 962,
+   "comments": 963,
    "shares": 57900,
    "created": 1785960208,
    "url": "https://www.tiktok.com/@hafizur_r/video/7670640672700976417",
@@ -184,7 +184,7 @@
    "views": 1600000,
    "likes": 59000,
    "comments": 247,
-   "shares": 2064,
+   "shares": 2065,
    "created": 1791564300,
    "url": "https://www.tiktok.com/@hafizur_r/video/7694696372934642966",
    "cover": "assets/covers/7694696372934642966.jpg"
@@ -192,7 +192,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 597900,
+   "views": 598000,
    "likes": 52400,
    "comments": 146,
    "shares": 16700,
@@ -214,7 +214,7 @@
   {
    "id": "7705671677606251798",
    "title": "Slow days in Sri Lanka  📍Coconut Palm Beach Hotel #srilanka #srilankatiktok #srilankatiktok🇱🇰 #travel #slowlife ",
-   "views": 4401,
+   "views": 4405,
    "likes": 173,
    "comments": 7,
    "shares": 25,
@@ -303,9 +303,9 @@
    "id": "7695791861096615190",
    "title": "Big Kid vibes when going Disneyland Shanghai #shanghaidisneyland #shanghai #china #disneyland #disneyworld ",
    "views": 185100,
-   "likes": 22200,
+   "likes": 22300,
    "comments": 131,
-   "shares": 5454,
+   "shares": 5456,
    "created": 1791819000,
    "url": "https://www.tiktok.com/@hafizur_r/video/7695791861096615190",
    "cover": "assets/covers/7695791861096615190.jpg"
