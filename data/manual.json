@@ -264,7 +264,8 @@
           "title": "UGC for your channels",
           "text": "Vertical footage and edits you can run on your own accounts and ads."
         }
-      ]
+      ],
+      "bg_photos": []
     },
     "fashion": {
       "label": "Fashion & lifestyle",
@@ -324,7 +325,8 @@
           "title": "UGC for your channels",
           "text": "Vertical footage and edits you can run on your own accounts and ads."
         }
-      ]
+      ],
+      "bg_photos": []
     },
     "events": {
       "label": "Entertainment & events",
@@ -384,7 +386,10 @@
           "title": "UGC for your channels",
           "text": "Vertical footage and edits you can run on your own accounts and ads."
         }
-      ]
+      ],
+      "bg_photos": []
     }
-  }
+  },
+  "_bg_photos_help": "Faded pictures behind the media kit: image paths such as assets/bg/beach.jpg. Each kit can set its own bg_photos. Leave [] for a plain background.",
+  "bg_photos": []
 }

@@ -169,6 +169,7 @@ function kitPage(m, s) {
 (async () => {
   const [m, s] = await Promise.all([getJSON("data/manual.json"), getJSON("data/stats.json")]);
   document.documentElement.dataset.theme = m.theme || "sunset";
+  bgPhotos(m);
   if (m.banner === false) document.documentElement.classList.add("no-banner");
   hero(m);
   if (document.body.dataset.page === "bio") bioPage(m, s);
@@ -287,4 +288,18 @@ function avatarVideo(m) {
   };
   v.addEventListener("ended", () => { wrap.classList.remove("playing"); setTimeout(play, 8000); });
   setTimeout(play, 2500);
+}
+
+// ---------------------------------------------------------------- faded photo background
+function bgPhotos(m) {
+  const kit = (m.kits || {})[document.body.dataset.kit] || {};
+  const ids = (kit.bg_photos || m.bg_photos || []).filter(Boolean);
+  if (!ids.length) return;
+  const wall = document.createElement("div");
+  wall.className = "bg-photos";
+  wall.setAttribute("aria-hidden", "true");
+  const list = [...ids, ...ids, ...ids].slice(0, Math.max(6, ids.length));
+  wall.innerHTML = list.map((id) => `<img src="${esc(id)}" alt="" onerror="this.style.visibility='hidden'">`).join("");
+  document.body.prepend(wall);
+  document.body.classList.add("has-bg");
 }

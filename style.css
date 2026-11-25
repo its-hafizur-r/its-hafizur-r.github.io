@@ -354,3 +354,10 @@ footer a { color: var(--muted); }
   .home #featured.vid-scroller { grid-template-columns: repeat(6, 1fr); }
 }
 .kit-thanks { padding-bottom: 0; }
+
+/* faded photo wall behind the page (manual.json bg_photos / kits.<key>.bg_photos) */
+.bg-photos { position: fixed; inset: 0; z-index: -1; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 0; overflow: hidden; pointer-events: none; }
+.bg-photos img { width: 100%; height: 100%; object-fit: cover; opacity: .16; filter: saturate(.55) sepia(.25); }
+.bg-photos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 35%, transparent), color-mix(in srgb, var(--bg) 55%, transparent)); }
+@media (min-width: 720px) { .bg-photos { grid-template-columns: repeat(6, 1fr); } }
+body.has-bg { background: var(--bg); position: relative; z-index: 0; }
