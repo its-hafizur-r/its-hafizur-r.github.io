@@ -303,4 +303,13 @@ function bgPhotos(m) {
   wall.innerHTML = list.map((id) => `<img src="${esc(id)}" alt="" onerror="this.style.visibility='hidden'">`).join("");
   document.body.prepend(wall);
   document.body.classList.add("has-bg");
+  const imgs = [...wall.children];
+  const pick = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const i = Math.min(imgs.length - 1, Math.floor((max > 0 ? scrollY / max : 0) * imgs.length));
+    imgs.forEach((im, j) => im.classList.toggle("on", j === i));
+  };
+  pick();
+  addEventListener("scroll", pick, { passive: true });
+  addEventListener("resize", pick);
 }
