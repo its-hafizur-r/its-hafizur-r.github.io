@@ -304,10 +304,12 @@ function bgPhotos(m) {
   document.body.prepend(wall);
   document.body.classList.add("has-bg");
   const imgs = [...wall.children];
+  imgs.forEach((im, j) => im.style.setProperty("--i", j));
   const pick = () => {
     const max = document.documentElement.scrollHeight - innerHeight;
     const i = Math.min(imgs.length - 1, Math.floor((max > 0 ? scrollY / max : 0) * imgs.length));
-    imgs.forEach((im, j) => im.classList.toggle("on", j === i));
+    const all = matchMedia("(min-width: 720px)").matches;
+    imgs.forEach((im, j) => im.classList.toggle("on", all || j === i));
   };
   pick();
   addEventListener("scroll", pick, { passive: true });

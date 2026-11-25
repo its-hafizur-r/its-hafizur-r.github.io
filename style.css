@@ -362,8 +362,14 @@ footer a { color: var(--muted); }
 .bg-photos img.on { opacity: .85; }
 .bg-photos::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 18%, transparent), color-mix(in srgb, var(--bg) 28%, transparent)); }
 @media (min-width: 720px) {
-  .bg-photos { display: grid; grid-template-columns: repeat(var(--n, 1), 1fr); }
-  .bg-photos img { position: static; min-height: 0; opacity: .8; }
+  /* side by side, each photo overlapping its neighbour and fading into it */
+  .bg-photos img { --o: 9%; opacity: .8; width: calc(100% / var(--n, 1) + 2 * var(--o)); left: calc(100% / var(--n, 1) * var(--i, 0) - var(--o));
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 28%, #000 72%, transparent); mask-image: linear-gradient(90deg, transparent, #000 28%, #000 72%, transparent); }
+  .bg-photos img:first-child { left: 0; width: calc(100% / var(--n, 1) + var(--o));
+    -webkit-mask-image: linear-gradient(90deg, #000 72%, transparent); mask-image: linear-gradient(90deg, #000 72%, transparent); }
+  .bg-photos img:last-of-type { width: calc(100% / var(--n, 1) + var(--o));
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 28%); mask-image: linear-gradient(90deg, transparent, #000 28%); }
+  .bg-photos img:only-of-type { width: 100%; -webkit-mask-image: none; mask-image: none; }
 }
 body.has-bg { background: var(--bg); position: relative; z-index: 0; }
 .has-bg h2, .has-bg .eyebrow, .has-bg .handle, .has-bg .note, .has-bg .thanks p { text-shadow: 0 0 14px var(--bg), 0 0 6px var(--bg), 0 0 2px var(--bg); }
