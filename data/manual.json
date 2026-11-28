@@ -200,7 +200,7 @@
     "skip_newer_than_days": 0,
     "top_videos": 12
   },
-  "tiktok_client_key": "",
+  "tiktok_client_key": "sbaw7fewleysstbnj0",
   "avatar_video": "",
   "_avatar_video_help": "Optional short silent clip (mp4) in assets/ that plays inside the profile photo every few seconds on the media kit. Leave empty to show just the photo.",
   "_kits_help": "Tailored media kits, each with its own link: /media-kit/<key>/ (e.g. /media-kit/travel/). Anything set here replaces the general kit's version on that page: label, pitch (extra About me paragraph), style_videos_title, style_videos, brands_first (brand names to show first), services. After adding a new kit key, run: python3 scripts/make_kits.py",
