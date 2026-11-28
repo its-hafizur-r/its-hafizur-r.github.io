@@ -1,13 +1,13 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-28T16:33:31Z",
+ "updated": "2026-11-28T16:36:02Z",
  "source": "tiktok_api",
  "profile": {
   "followers": 13028,
   "following": 59,
-  "likes": 2301827,
+  "likes": 2301838,
   "videos": 602,
-  "total_views": 29533850,
+  "total_views": 29533976,
   "total_views_complete": false
  },
  "recent": {
@@ -25,8 +25,8 @@
   {
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
-   "views": 2282635,
-   "likes": 237294,
+   "views": 2282669,
+   "likes": 237302,
    "comments": 492,
    "shares": 50893,
    "created": 1791462781,
@@ -36,7 +36,7 @@
   {
    "id": "7670640672700976417",
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
-   "views": 2252715,
+   "views": 2252717,
    "likes": 317519,
    "comments": 963,
    "shares": 57983,
@@ -47,8 +47,8 @@
   {
    "id": "7694696372934642966",
    "title": "At this point they should just allow phones on the Tron ride, everyone wants to do the trend! #tron #shanghaidisneyland #disneyworld #disney",
-   "views": 1685156,
-   "likes": 61322,
+   "views": 1685192,
+   "likes": 61324,
    "comments": 255,
    "shares": 2128,
    "created": 1791564300,
@@ -58,7 +58,7 @@
   {
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
-   "views": 1371048,
+   "views": 1371050,
    "likes": 205150,
    "comments": 414,
    "shares": 23219,
@@ -102,7 +102,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 607281,
+   "views": 607298,
    "likes": 53143,
    "comments": 151,
    "shares": 16870,
@@ -135,8 +135,8 @@
   {
    "id": "7487305044476333334",
    "title": "Missing the dubai vibe, I want to travel again! ✈️ #dubai #dubai🇦🇪 #dubaitravel #luxurytravel #luxurylifestyle #muslim #couplestiktok #trave",
-   "views": 433475,
-   "likes": 37557,
+   "views": 433476,
+   "likes": 37558,
    "comments": 86,
    "shares": 4312,
    "created": 1743274057,
@@ -146,7 +146,7 @@
   {
    "id": "7573000664574381334",
    "title": "Was hyped to rewatch the Shibuya Arc, but that was cut so bad, and the Culling game part of the film didnt even leave me excited for the new",
-   "views": 426464,
+   "views": 426465,
    "likes": 20106,
    "comments": 333,
    "shares": 2134,
@@ -159,8 +159,8 @@
   {
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
-   "views": 2282635,
-   "likes": 237294,
+   "views": 2282669,
+   "likes": 237302,
    "comments": 492,
    "shares": 50893,
    "created": 1791462781,
@@ -170,7 +170,7 @@
   {
    "id": "7670640672700976417",
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
-   "views": 2252715,
+   "views": 2252717,
    "likes": 317519,
    "comments": 963,
    "shares": 57983,
@@ -181,8 +181,8 @@
   {
    "id": "7694696372934642966",
    "title": "At this point they should just allow phones on the Tron ride, everyone wants to do the trend! #tron #shanghaidisneyland #disneyworld #disney",
-   "views": 1685156,
-   "likes": 61322,
+   "views": 1685192,
+   "likes": 61324,
    "comments": 255,
    "shares": 2128,
    "created": 1791564300,
@@ -192,7 +192,7 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 607281,
+   "views": 607298,
    "likes": 53143,
    "comments": 151,
    "shares": 16870,
@@ -225,7 +225,7 @@
   {
    "id": "7657228482300120342",
    "title": "The Best Activity to do in China, Zhangjiajie 🇨🇳 #china #travel #traveltiktok #zhangjiajie #chinatravel ",
-   "views": 412903,
+   "views": 412904,
    "likes": 27832,
    "comments": 384,
    "shares": 9377,
@@ -247,7 +247,7 @@
   {
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
-   "views": 1371048,
+   "views": 1371050,
    "likes": 205150,
    "comments": 414,
    "shares": 23219,
@@ -280,8 +280,8 @@
   {
    "id": "7487305044476333334",
    "title": "Missing the dubai vibe, I want to travel again! ✈️ #dubai #dubai🇦🇪 #dubaitravel #luxurytravel #luxurylifestyle #muslim #couplestiktok #trave",
-   "views": 433475,
-   "likes": 37557,
+   "views": 433476,
+   "likes": 37558,
    "comments": 86,
    "shares": 4312,
    "created": 1743274057,
@@ -302,7 +302,7 @@
   {
    "id": "7695791861096615190",
    "title": "Big Kid vibes when going Disneyland Shanghai #shanghaidisneyland #shanghai #china #disneyland #disneyworld ",
-   "views": 192240,
+   "views": 192247,
    "likes": 23033,
    "comments": 131,
    "shares": 5589,
