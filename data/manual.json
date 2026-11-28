@@ -198,7 +198,9 @@
     "window_days": 30,
     "min_videos": 8,
     "skip_newer_than_days": 0,
-    "top_videos": 12
+    "top_videos": 12,
+    "only_increase": true,
+    "_only_increase_help": "true: followers, likes, total views and the 30-day average only change when they beat the best reading so far. false: always show today's numbers."
   },
   "tiktok_client_key": "sbaw7fewleysstbnj0",
   "avatar_video": "",
