@@ -307,16 +307,9 @@ def main():
         "top_videos": top_out,
         "featured": featured_out,
     }
-    # only_increase: a headline number only changes when the new reading beats the
-    # best one so far. Every value shown is still a real past reading, never invented.
+    # only_increase: the 30-day average only changes when the new reading beats the
+    # best one so far. The kept value is a real past reading, never invented.
     if cfg.get("only_increase", True):
-        op, np_ = old.get("profile") or {}, stats["profile"]
-        for k in ("followers", "likes", "total_views"):
-            if isinstance(op.get(k), (int, float)) and op[k] > (np_.get(k) or 0):
-                print(f"  keeping best {k}: {op[k]} (today {np_.get(k)})")
-                np_[k] = op[k]
-                if k == "total_views":
-                    np_["total_views_complete"] = op.get("total_views_complete", False)
         orc, nrc = old.get("recent") or {}, stats["recent"] or {}
         if orc.get("avg_views") and orc["avg_views"] > (nrc.get("avg_views") or 0):
             # keep the whole earlier window so its dates still match the average

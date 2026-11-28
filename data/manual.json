@@ -200,7 +200,7 @@
     "skip_newer_than_days": 0,
     "top_videos": 12,
     "only_increase": true,
-    "_only_increase_help": "true: followers, likes, total views and the 30-day average only change when they beat the best reading so far. false: always show today's numbers."
+    "_only_increase_help": "true: the 30-day average views only changes when it beats the best reading so far (other stats update daily). false: always show today's average."
   },
   "tiktok_client_key": "sbaw7fewleysstbnj0",
   "avatar_video": "",
