@@ -110,14 +110,12 @@ function kitPage(m, s) {
     ["Followers", short(p.followers), true],
     ["Total views", tv],
     ["Total likes", short(p.likes)],
-    ["Avg views (last 30 days)", short(r.avg_views)],
+    ["Avg views (30 days)", short(r.avg_views)],
     [`Profile views (${esc(a.period || "30 days")})`, short(a.profile_views)],
     [`Impressions (${esc(a.period || "30 days")})`, short(a.impressions)],
   ].filter((t) => t[1] !== "–");
   fill("stats", tiles.map(([l, v, f]) => `<div class="stat${f ? " feature" : ""}"><div class="num">${v}</div><div class="lab">${l}</div></div>`).join(""));
-  fill("stats-note", r.videos_counted
-    ? `Average views cover the ${r.videos_counted} videos I posted ${date(r.from)} to ${date(r.to)}. Updated ${date(s.updated)}.`
-    : "");
+  fill("stats-note", "");
 
   const bars = (rows) => rows.map(([k, v]) => {
     const max = Math.max(...rows.map((x) => x[1]));
