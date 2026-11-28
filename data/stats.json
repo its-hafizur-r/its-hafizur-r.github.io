@@ -1,13 +1,13 @@
 {
  "_note": "Written by scripts/sync_tiktok.py every day. Don't edit by hand; edit manual.json instead.",
- "updated": "2026-11-28T16:26:46Z",
+ "updated": "2026-11-28T16:33:31Z",
  "source": "tiktok_api",
  "profile": {
   "followers": 13028,
   "following": 59,
-  "likes": 2301801,
+  "likes": 2301827,
   "videos": 602,
-  "total_views": 29533509,
+  "total_views": 29533850,
   "total_views_complete": false
  },
  "recent": {
@@ -25,10 +25,10 @@
   {
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
-   "views": 2282546,
-   "likes": 237284,
+   "views": 2282635,
+   "likes": 237294,
    "comments": 492,
-   "shares": 50891,
+   "shares": 50893,
    "created": 1791462781,
    "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598?utm_campaign=tt4d_open_api&utm_source=sbaw7fewleysstbnj0",
    "cover": "assets/covers/7694274023546424598.jpg"
@@ -36,8 +36,8 @@
   {
    "id": "7670640672700976417",
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
-   "views": 2252704,
-   "likes": 317516,
+   "views": 2252715,
+   "likes": 317519,
    "comments": 963,
    "shares": 57983,
    "created": 1785960208,
@@ -47,8 +47,8 @@
   {
    "id": "7694696372934642966",
    "title": "At this point they should just allow phones on the Tron ride, everyone wants to do the trend! #tron #shanghaidisneyland #disneyworld #disney",
-   "views": 1685060,
-   "likes": 61318,
+   "views": 1685156,
+   "likes": 61322,
    "comments": 255,
    "shares": 2128,
    "created": 1791564300,
@@ -58,7 +58,7 @@
   {
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
-   "views": 1371040,
+   "views": 1371048,
    "likes": 205150,
    "comments": 414,
    "shares": 23219,
@@ -69,7 +69,7 @@
   {
    "id": "7648241796643867926",
    "title": "Million dollar view for cheap  📍Berkin hotel Chongqing  #china #chongqing #chinatravel #chinatrip #travelinspo ",
-   "views": 925742,
+   "views": 925743,
    "likes": 111791,
    "comments": 1460,
    "shares": 15908,
@@ -91,7 +91,7 @@
   {
    "id": "7657268246541847830",
    "title": "In all my travels One of my Favourite activities ive done in any country; Zhangjiajie Sky Ladder #china #zhangjiajie #travel #itinerary #tra",
-   "views": 667168,
+   "views": 667174,
    "likes": 49206,
    "comments": 391,
    "shares": 10321,
@@ -102,10 +102,10 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 607253,
-   "likes": 53141,
+   "views": 607281,
+   "likes": 53143,
    "comments": 151,
-   "shares": 16869,
+   "shares": 16870,
    "created": 1789403279,
    "url": "https://www.tiktok.com/@hafizur_r/video/7685428540522646806?utm_campaign=tt4d_open_api&utm_source=sbaw7fewleysstbnj0",
    "cover": "assets/covers/7685428540522646806.jpg"
@@ -135,7 +135,7 @@
   {
    "id": "7487305044476333334",
    "title": "Missing the dubai vibe, I want to travel again! ✈️ #dubai #dubai🇦🇪 #dubaitravel #luxurytravel #luxurylifestyle #muslim #couplestiktok #trave",
-   "views": 433474,
+   "views": 433475,
    "likes": 37557,
    "comments": 86,
    "shares": 4312,
@@ -159,10 +159,10 @@
   {
    "id": "7694274023546424598",
    "title": "Zootopia land at Shanghai Disneyland 🐰🦊🇨🇳🚓 #shanghaidisneyland #zootopia #disneyland #shanghai #disney ",
-   "views": 2282546,
-   "likes": 237284,
+   "views": 2282635,
+   "likes": 237294,
    "comments": 492,
-   "shares": 50891,
+   "shares": 50893,
    "created": 1791462781,
    "url": "https://www.tiktok.com/@hafizur_r/video/7694274023546424598?utm_campaign=tt4d_open_api&utm_source=sbaw7fewleysstbnj0",
    "cover": "assets/covers/7694274023546424598.jpg"
@@ -170,8 +170,8 @@
   {
    "id": "7670640672700976417",
    "title": "The best Jurassic Park/World ride is in Universal Studios Beijing 🇨🇳 #universalstudio #beijing #jurassicworld #jurassicpark #china ",
-   "views": 2252704,
-   "likes": 317516,
+   "views": 2252715,
+   "likes": 317519,
    "comments": 963,
    "shares": 57983,
    "created": 1785960208,
@@ -181,8 +181,8 @@
   {
    "id": "7694696372934642966",
    "title": "At this point they should just allow phones on the Tron ride, everyone wants to do the trend! #tron #shanghaidisneyland #disneyworld #disney",
-   "views": 1685060,
-   "likes": 61318,
+   "views": 1685156,
+   "likes": 61322,
    "comments": 255,
    "shares": 2128,
    "created": 1791564300,
@@ -192,10 +192,10 @@
   {
    "id": "7685428540522646806",
    "title": "One of the best activities is to feed Red Pandas 🥺 at Shanghai Wild Animal Park , China 🇨🇳 #redpanda #shanghai #china #chinatravel #travelti",
-   "views": 607253,
-   "likes": 53141,
+   "views": 607281,
+   "likes": 53143,
    "comments": 151,
-   "shares": 16869,
+   "shares": 16870,
    "created": 1789403279,
    "url": "https://www.tiktok.com/@hafizur_r/video/7685428540522646806?utm_campaign=tt4d_open_api&utm_source=sbaw7fewleysstbnj0",
    "cover": "assets/covers/7685428540522646806.jpg"
@@ -203,7 +203,7 @@
   {
    "id": "7657268246541847830",
    "title": "In all my travels One of my Favourite activities ive done in any country; Zhangjiajie Sky Ladder #china #zhangjiajie #travel #itinerary #tra",
-   "views": 667168,
+   "views": 667174,
    "likes": 49206,
    "comments": 391,
    "shares": 10321,
@@ -225,8 +225,8 @@
   {
    "id": "7657228482300120342",
    "title": "The Best Activity to do in China, Zhangjiajie 🇨🇳 #china #travel #traveltiktok #zhangjiajie #chinatravel ",
-   "views": 412939,
-   "likes": 27838,
+   "views": 412903,
+   "likes": 27832,
    "comments": 384,
    "shares": 9377,
    "created": 1782837441,
@@ -247,7 +247,7 @@
   {
    "id": "7652421190723652886",
    "title": "Million dollar view 🇨🇳 #china #chongqing #views #chinatravel #travel ",
-   "views": 1371040,
+   "views": 1371048,
    "likes": 205150,
    "comments": 414,
    "shares": 23219,
@@ -258,7 +258,7 @@
   {
    "id": "7648241796643867926",
    "title": "Million dollar view for cheap  📍Berkin hotel Chongqing  #china #chongqing #chinatravel #chinatrip #travelinspo ",
-   "views": 925742,
+   "views": 925743,
    "likes": 111791,
    "comments": 1460,
    "shares": 15908,
@@ -280,7 +280,7 @@
   {
    "id": "7487305044476333334",
    "title": "Missing the dubai vibe, I want to travel again! ✈️ #dubai #dubai🇦🇪 #dubaitravel #luxurytravel #luxurylifestyle #muslim #couplestiktok #trave",
-   "views": 433474,
+   "views": 433475,
    "likes": 37557,
    "comments": 86,
    "shares": 4312,
@@ -302,10 +302,10 @@
   {
    "id": "7695791861096615190",
    "title": "Big Kid vibes when going Disneyland Shanghai #shanghaidisneyland #shanghai #china #disneyland #disneyworld ",
-   "views": 192229,
-   "likes": 23031,
+   "views": 192240,
+   "likes": 23033,
    "comments": 131,
-   "shares": 5588,
+   "shares": 5589,
    "created": 1791819000,
    "url": "https://www.tiktok.com/@hafizur_r/video/7695791861096615190?utm_campaign=tt4d_open_api&utm_source=sbaw7fewleysstbnj0",
    "cover": "assets/covers/7695791861096615190.jpg"
