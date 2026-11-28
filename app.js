@@ -115,7 +115,7 @@ function kitPage(m, s) {
     [`Impressions (${esc(a.period || "30 days")})`, short(a.impressions)],
   ].filter((t) => t[1] !== "–");
   fill("stats", tiles.map(([l, v, f]) => `<div class="stat${f ? " feature" : ""}"><div class="num">${v}</div><div class="lab">${l}</div></div>`).join(""));
-  fill("stats-note", "");
+  fill("stats-note", s.updated ? `Updated ${date(s.updated)}.` : "");
 
   const bars = (rows) => rows.map(([k, v]) => {
     const max = Math.max(...rows.map((x) => x[1]));
