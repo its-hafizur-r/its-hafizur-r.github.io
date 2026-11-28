@@ -246,6 +246,7 @@ def main():
     handle = manual.get("handle", "hafizur_r")
     key, secret, refresh = (os.environ.get(k, "").strip() for k in
                             ("TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"))
+    key = manual.get("tiktok_client_key") or key  # not secret; must match the secret's app
     src = TikTokAPI(key, secret, refresh) if key and secret and refresh else PublicPages(handle)
     print("source:", src.name)
 
